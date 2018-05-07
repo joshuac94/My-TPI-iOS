@@ -1,0 +1,874 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		550079052093BD6D005FA251 /* JCSplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550079042093BD6D005FA251 /* JCSplashVC.swift */; };
+		550079072093BF22005FA251 /* construction_site.json in Resources */ = {isa = PBXBuildFile; fileRef = 550079062093BF22005FA251 /* construction_site.json */; };
+		550079092093BF3E005FA251 /* pulse_loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 550079082093BF3E005FA251 /* pulse_loader.json */; };
+		5500790D20947F27005FA251 /* tick.json in Resources */ = {isa = PBXBuildFile; fileRef = 5500790C20947F27005FA251 /* tick.json */; };
+		5518BEA320544CA0005F240C /* JCApplianceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518BEA220544CA0005F240C /* JCApplianceListVC.swift */; };
+		5518BEA520544CCD005F240C /* JCApplianceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5518BEA420544CCD005F240C /* JCApplianceListInteractor.swift */; };
+		5523F2EB205AF3DC00375A43 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2EA205AF3DC00375A43 /* UIViewController.swift */; };
+		5523F2EE205B04E500375A43 /* JCApplianceReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2ED205B04E500375A43 /* JCApplianceReviewVC.swift */; };
+		5523F2F3205B085800375A43 /* JCApplianceReviewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2F2205B085800375A43 /* JCApplianceReviewInteractor.swift */; };
+		5523F2F5205B087200375A43 /* JCApplianceReviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2F4205B087200375A43 /* JCApplianceReviewPresenter.swift */; };
+		5523F2F9205B096200375A43 /* JCApplianceReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2F8205B096200375A43 /* JCApplianceReviewViewModel.swift */; };
+		5523F2FC205B0E3B00375A43 /* JCApplianceChecklistRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2FB205B0E3B00375A43 /* JCApplianceChecklistRepo.swift */; };
+		5523F2FE205B1ECD00375A43 /* JCPDFViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F2FD205B1ECD00375A43 /* JCPDFViewer.swift */; };
+		5523F300205B237900375A43 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5523F2FF205B237900375A43 /* index.html */; };
+		5523F303205B3C0B00375A43 /* JCApplianceListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F301205B3C0B00375A43 /* JCApplianceListCell.swift */; };
+		5523F304205B3C0B00375A43 /* JCApplianceListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5523F302205B3C0B00375A43 /* JCApplianceListCell.xib */; };
+		5523F306205B3EAE00375A43 /* JCApplianceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5523F305205B3EAE00375A43 /* JCApplianceListViewModel.swift */; };
+		553F24A52051E81B00D751C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24A42051E81B00D751C6 /* AppDelegate.swift */; };
+		553F24AA2051E81B00D751C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553F24A82051E81B00D751C6 /* Main.storyboard */; };
+		553F24AD2051E81B00D751C6 /* My_TPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 553F24AB2051E81B00D751C6 /* My_TPI.xcdatamodeld */; };
+		553F24AF2051E81B00D751C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553F24AE2051E81B00D751C6 /* Assets.xcassets */; };
+		553F24B22051E81B00D751C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 553F24B02051E81B00D751C6 /* LaunchScreen.storyboard */; };
+		553F24BD2051E81B00D751C6 /* My_TPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24BC2051E81B00D751C6 /* My_TPITests.swift */; };
+		553F24CD2051E89D00D751C6 /* JCDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24CC2051E89D00D751C6 /* JCDashboardVC.swift */; };
+		553F24D52051F31D00D751C6 /* JCApplianceChecklistVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24D42051F31D00D751C6 /* JCApplianceChecklistVC.swift */; };
+		553F24D82051FD0A00D751C6 /* JCApplianceChecklistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24D72051FD0A00D751C6 /* JCApplianceChecklistInteractor.swift */; };
+		553F24F42053285500D751C6 /* JCEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24F32053285500D751C6 /* JCEnums.swift */; };
+		553F25012053658A00D751C6 /* JCTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F24FF2053658A00D751C6 /* JCTextFieldCell.swift */; };
+		553F25022053658A00D751C6 /* JCTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553F25002053658A00D751C6 /* JCTextFieldCell.xib */; };
+		553F250420536BFD00D751C6 /* JCTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F250320536BFD00D751C6 /* JCTextField.swift */; };
+		553F250720540D2E00D751C6 /* JCCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F250620540D2E00D751C6 /* JCCoreDataHelper.swift */; };
+		557C6DE82094FE55007B20D7 /* JCButtonsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557C6DE62094FE55007B20D7 /* JCButtonsCell.swift */; };
+		557C6DE92094FE55007B20D7 /* JCButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 557C6DE72094FE55007B20D7 /* JCButtonsCell.xib */; };
+		5585F0AF2096879C00112AF0 /* JCBottomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585F0AD2096879C00112AF0 /* JCBottomCell.swift */; };
+		5585F0B02096879C00112AF0 /* JCBottomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5585F0AE2096879C00112AF0 /* JCBottomCell.xib */; };
+		5585F0B32096892300112AF0 /* JCTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585F0B12096892300112AF0 /* JCTitleCell.swift */; };
+		5585F0B42096892300112AF0 /* JCTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5585F0B22096892300112AF0 /* JCTitleCell.xib */; };
+		5585F0B720968DC700112AF0 /* JCMiddleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585F0B520968DC700112AF0 /* JCMiddleCell.swift */; };
+		5585F0B820968DC700112AF0 /* JCMiddleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5585F0B620968DC700112AF0 /* JCMiddleCell.xib */; };
+		5585F0BC2099088100112AF0 /* JCApplianceEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5585F0BB2099088100112AF0 /* JCApplianceEnums.swift */; };
+		55A8892E205715E00065F485 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8892D205715E00065F485 /* Date.swift */; };
+		55A88934205847A90065F485 /* JCDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A88933205847A90065F485 /* JCDashboardInteractor.swift */; };
+		55A88936205849BF0065F485 /* JCApplianceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A88935205849BF0065F485 /* JCApplianceListPresenter.swift */; };
+		55A8893920589F440065F485 /* JCExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8893820589F440065F485 /* JCExpandableHeaderView.swift */; };
+		55F8CAD32055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8CAD22055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift */; };
+		EDA5C9DCA94CF6F255A0FDB0 /* Pods_My_TPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22DA8EA67E24968C360EBEF /* Pods_My_TPI.framework */; };
+		FC3251059B257ABFF7D8B5A4 /* Pods_My_TPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123A61043E3824C789945936 /* Pods_My_TPITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		553F24B92051E81B00D751C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 553F24992051E81B00D751C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 553F24A02051E81B00D751C6;
+			remoteInfo = "My TPI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		123A61043E3824C789945936 /* Pods_My_TPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_TPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550079042093BD6D005FA251 /* JCSplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSplashVC.swift; sourceTree = "<group>"; };
+		550079062093BF22005FA251 /* construction_site.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = construction_site.json; sourceTree = "<group>"; };
+		550079082093BF3E005FA251 /* pulse_loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pulse_loader.json; sourceTree = "<group>"; };
+		5500790C20947F27005FA251 /* tick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tick.json; sourceTree = "<group>"; };
+		5518BEA220544CA0005F240C /* JCApplianceListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListVC.swift; path = "My TPI/Classes/JCApplianceListVC.swift"; sourceTree = SOURCE_ROOT; };
+		5518BEA420544CCD005F240C /* JCApplianceListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListInteractor.swift; path = "My TPI/Classes/JCApplianceListInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2EA205AF3DC00375A43 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		5523F2ED205B04E500375A43 /* JCApplianceReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceReviewVC.swift; path = "My TPI/Features/Appliance Review/UI Layer/JCApplianceReviewVC.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2F2205B085800375A43 /* JCApplianceReviewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceReviewInteractor.swift; path = "My TPI/Classes/JCApplianceReviewInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2F4205B087200375A43 /* JCApplianceReviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceReviewPresenter.swift; path = "My TPI/Classes/JCApplianceReviewPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2F8205B096200375A43 /* JCApplianceReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceReviewViewModel.swift; path = "My TPI/Classes/JCApplianceReviewViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2FB205B0E3B00375A43 /* JCApplianceChecklistRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JCApplianceChecklistRepo.swift; sourceTree = "<group>"; };
+		5523F2FD205B1ECD00375A43 /* JCPDFViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCPDFViewer.swift; path = "My TPI/Elements/JCPDFViewer.swift"; sourceTree = SOURCE_ROOT; };
+		5523F2FF205B237900375A43 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		5523F301205B3C0B00375A43 /* JCApplianceListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListCell.swift; path = "My TPI/Classes/JCApplianceListCell.swift"; sourceTree = SOURCE_ROOT; };
+		5523F302205B3C0B00375A43 /* JCApplianceListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JCApplianceListCell.xib; path = "My TPI/Classes/JCApplianceListCell.xib"; sourceTree = SOURCE_ROOT; };
+		5523F305205B3EAE00375A43 /* JCApplianceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListViewModel.swift; path = "My TPI/Classes/JCApplianceListViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		553F24A12051E81B00D751C6 /* My TPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My TPI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		553F24A42051E81B00D751C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		553F24A92051E81B00D751C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		553F24AC2051E81B00D751C6 /* My_TPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_TPI.xcdatamodel; sourceTree = "<group>"; };
+		553F24AE2051E81B00D751C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		553F24B12051E81B00D751C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		553F24B32051E81B00D751C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553F24B82051E81B00D751C6 /* My TPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My TPITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		553F24BC2051E81B00D751C6 /* My_TPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_TPITests.swift; sourceTree = "<group>"; };
+		553F24BE2051E81B00D751C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553F24CC2051E89D00D751C6 /* JCDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCDashboardVC.swift; path = "My TPI/Classes/JCDashboardVC.swift"; sourceTree = SOURCE_ROOT; };
+		553F24D42051F31D00D751C6 /* JCApplianceChecklistVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceChecklistVC.swift; path = "My TPI/Classes/JCApplianceChecklistVC.swift"; sourceTree = SOURCE_ROOT; };
+		553F24D72051FD0A00D751C6 /* JCApplianceChecklistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceChecklistInteractor.swift; path = "My TPI/Classes/JCApplianceChecklistInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		553F24F32053285500D751C6 /* JCEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCEnums.swift; path = "My TPI/Common/JCEnums.swift"; sourceTree = SOURCE_ROOT; };
+		553F24FF2053658A00D751C6 /* JCTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCTextFieldCell.swift; path = "My TPI/Elements/Cells/JCTextFieldCell.swift"; sourceTree = SOURCE_ROOT; };
+		553F25002053658A00D751C6 /* JCTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JCTextFieldCell.xib; path = "My TPI/Elements/Cells/JCTextFieldCell.xib"; sourceTree = SOURCE_ROOT; };
+		553F250320536BFD00D751C6 /* JCTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCTextField.swift; path = "My TPI/Classes/JCTextField.swift"; sourceTree = SOURCE_ROOT; };
+		553F250620540D2E00D751C6 /* JCCoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCCoreDataHelper.swift; path = "My TPI/Classes/JCCoreDataHelper.swift"; sourceTree = SOURCE_ROOT; };
+		557C6DE62094FE55007B20D7 /* JCButtonsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCButtonsCell.swift; sourceTree = "<group>"; };
+		557C6DE72094FE55007B20D7 /* JCButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCButtonsCell.xib; sourceTree = "<group>"; };
+		5585F0AD2096879C00112AF0 /* JCBottomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCBottomCell.swift; sourceTree = "<group>"; };
+		5585F0AE2096879C00112AF0 /* JCBottomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCBottomCell.xib; sourceTree = "<group>"; };
+		5585F0B12096892300112AF0 /* JCTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCTitleCell.swift; sourceTree = "<group>"; };
+		5585F0B22096892300112AF0 /* JCTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCTitleCell.xib; sourceTree = "<group>"; };
+		5585F0B520968DC700112AF0 /* JCMiddleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCMiddleCell.swift; sourceTree = "<group>"; };
+		5585F0B620968DC700112AF0 /* JCMiddleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JCMiddleCell.xib; sourceTree = "<group>"; };
+		5585F0BB2099088100112AF0 /* JCApplianceEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCApplianceEnums.swift; sourceTree = "<group>"; };
+		55A8892D205715E00065F485 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Date.swift; path = "My TPI/Classes/Date.swift"; sourceTree = SOURCE_ROOT; };
+		55A88933205847A90065F485 /* JCDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCDashboardInteractor.swift; path = "My TPI/Classes/JCDashboardInteractor.swift"; sourceTree = SOURCE_ROOT; };
+		55A88935205849BF0065F485 /* JCApplianceListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListPresenter.swift; path = "My TPI/Classes/JCApplianceListPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		55A8893820589F440065F485 /* JCExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCExpandableHeaderView.swift; sourceTree = "<group>"; };
+		55F8CAD22055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceChecklistPresenter.swift; path = "My TPI/Classes/JCApplianceChecklistPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		592445E27D4576225F00A94E /* Pods-My TPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My TPI/Pods-My TPI.debug.xcconfig"; sourceTree = "<group>"; };
+		5C4861A42032770EA884BCEF /* Pods-My TPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-My TPI/Pods-My TPI.release.xcconfig"; sourceTree = "<group>"; };
+		642B5B076ECBA8C48A8D99A3 /* Pods-My TPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My TPITests/Pods-My TPITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E145987B706862FB8194DF5F /* Pods-My TPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My TPITests/Pods-My TPITests.release.xcconfig"; sourceTree = "<group>"; };
+		E22DA8EA67E24968C360EBEF /* Pods_My_TPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_TPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		553F249E2051E81B00D751C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA5C9DCA94CF6F255A0FDB0 /* Pods_My_TPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553F24B52051E81B00D751C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC3251059B257ABFF7D8B5A4 /* Pods_My_TPITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5518BE9F20544C68005F240C /* Appliance List */ = {
+			isa = PBXGroup;
+			children = (
+				5518BEA020544C77005F240C /* UI Layer */,
+				5518BEA120544C7E005F240C /* Business Layer */,
+			);
+			path = "Appliance List";
+			sourceTree = "<group>";
+		};
+		5518BEA020544C77005F240C /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5518BEA220544CA0005F240C /* JCApplianceListVC.swift */,
+				5523F301205B3C0B00375A43 /* JCApplianceListCell.swift */,
+				5523F302205B3C0B00375A43 /* JCApplianceListCell.xib */,
+				5523F305205B3EAE00375A43 /* JCApplianceListViewModel.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		5518BEA120544C7E005F240C /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5518BEA420544CCD005F240C /* JCApplianceListInteractor.swift */,
+				55A88935205849BF0065F485 /* JCApplianceListPresenter.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		5523F2EC205B04B400375A43 /* Appliance Review */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2EF205B079200375A43 /* UI Layer */,
+				5523F2F0205B083000375A43 /* Business Layer */,
+			);
+			path = "Appliance Review";
+			sourceTree = "<group>";
+		};
+		5523F2EF205B079200375A43 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2ED205B04E500375A43 /* JCApplianceReviewVC.swift */,
+				5523F2F8205B096200375A43 /* JCApplianceReviewViewModel.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		5523F2F0205B083000375A43 /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2F2205B085800375A43 /* JCApplianceReviewInteractor.swift */,
+				5523F2F4205B087200375A43 /* JCApplianceReviewPresenter.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		5523F2FA205B0E1600375A43 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2FB205B0E3B00375A43 /* JCApplianceChecklistRepo.swift */,
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		553F24982051E81B00D751C6 = {
+			isa = PBXGroup;
+			children = (
+				553F24A32051E81B00D751C6 /* My TPI */,
+				553F24BB2051E81B00D751C6 /* My TPITests */,
+				553F24A22051E81B00D751C6 /* Products */,
+				871EA4B5D4794CB6D0EFE42D /* Pods */,
+				9ED6E72411AB854E54294887 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		553F24A22051E81B00D751C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				553F24A12051E81B00D751C6 /* My TPI.app */,
+				553F24B82051E81B00D751C6 /* My TPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		553F24A32051E81B00D751C6 /* My TPI */ = {
+			isa = PBXGroup;
+			children = (
+				55A8892C205715CC0065F485 /* Extensions */,
+				553F24FE2053653C00D751C6 /* Elements */,
+				553F24FB205341DE00D751C6 /* Common */,
+				553F24C72051E84800D751C6 /* Features */,
+				553F24A42051E81B00D751C6 /* AppDelegate.swift */,
+				553F24A82051E81B00D751C6 /* Main.storyboard */,
+				553F24AE2051E81B00D751C6 /* Assets.xcassets */,
+				553F24B02051E81B00D751C6 /* LaunchScreen.storyboard */,
+				553F24B32051E81B00D751C6 /* Info.plist */,
+				553F24AB2051E81B00D751C6 /* My_TPI.xcdatamodeld */,
+				5523F2FF205B237900375A43 /* index.html */,
+				550079062093BF22005FA251 /* construction_site.json */,
+				5500790C20947F27005FA251 /* tick.json */,
+				550079082093BF3E005FA251 /* pulse_loader.json */,
+			);
+			path = "My TPI";
+			sourceTree = "<group>";
+		};
+		553F24BB2051E81B00D751C6 /* My TPITests */ = {
+			isa = PBXGroup;
+			children = (
+				553F24BC2051E81B00D751C6 /* My_TPITests.swift */,
+				553F24BE2051E81B00D751C6 /* Info.plist */,
+			);
+			path = "My TPITests";
+			sourceTree = "<group>";
+		};
+		553F24C72051E84800D751C6 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2EC205B04B400375A43 /* Appliance Review */,
+				5518BE9F20544C68005F240C /* Appliance List */,
+				553F24D02051F14F00D751C6 /* Appliance Checklist */,
+				553F24C82051E84F00D751C6 /* Dashboard */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		553F24C82051E84F00D751C6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				553F24C92051E85900D751C6 /* UI Layer */,
+				553F24CA2051E86000D751C6 /* Business Layer */,
+				553F24CB2051E86700D751C6 /* Data Layer */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		553F24C92051E85900D751C6 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				553F24CC2051E89D00D751C6 /* JCDashboardVC.swift */,
+				550079042093BD6D005FA251 /* JCSplashVC.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		553F24CA2051E86000D751C6 /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				55A88933205847A90065F485 /* JCDashboardInteractor.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		553F24CB2051E86700D751C6 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		553F24D02051F14F00D751C6 /* Appliance Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				5585F0BB2099088100112AF0 /* JCApplianceEnums.swift */,
+				553F24D32051F1BE00D751C6 /* UI Layer */,
+				553F24D22051F1B500D751C6 /* Business Layer */,
+				5523F2FA205B0E1600375A43 /* Data Layer */,
+			);
+			path = "Appliance Checklist";
+			sourceTree = "<group>";
+		};
+		553F24D22051F1B500D751C6 /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				553F24D72051FD0A00D751C6 /* JCApplianceChecklistInteractor.swift */,
+				55F8CAD22055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		553F24D32051F1BE00D751C6 /* UI Layer */ = {
+			isa = PBXGroup;
+			children = (
+				553F24D42051F31D00D751C6 /* JCApplianceChecklistVC.swift */,
+			);
+			path = "UI Layer";
+			sourceTree = "<group>";
+		};
+		553F24FB205341DE00D751C6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				553F24F32053285500D751C6 /* JCEnums.swift */,
+				553F250620540D2E00D751C6 /* JCCoreDataHelper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		553F24FE2053653C00D751C6 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				553F250520536C3900D751C6 /* Cells */,
+				553F250320536BFD00D751C6 /* JCTextField.swift */,
+				55A8893820589F440065F485 /* JCExpandableHeaderView.swift */,
+				5523F2FD205B1ECD00375A43 /* JCPDFViewer.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		553F250520536C3900D751C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				553F24FF2053658A00D751C6 /* JCTextFieldCell.swift */,
+				553F25002053658A00D751C6 /* JCTextFieldCell.xib */,
+				557C6DE62094FE55007B20D7 /* JCButtonsCell.swift */,
+				557C6DE72094FE55007B20D7 /* JCButtonsCell.xib */,
+				5585F0AD2096879C00112AF0 /* JCBottomCell.swift */,
+				5585F0AE2096879C00112AF0 /* JCBottomCell.xib */,
+				5585F0B12096892300112AF0 /* JCTitleCell.swift */,
+				5585F0B22096892300112AF0 /* JCTitleCell.xib */,
+				5585F0B520968DC700112AF0 /* JCMiddleCell.swift */,
+				5585F0B620968DC700112AF0 /* JCMiddleCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		55A8892C205715CC0065F485 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5523F2EA205AF3DC00375A43 /* UIViewController.swift */,
+				55A8892D205715E00065F485 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		871EA4B5D4794CB6D0EFE42D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				592445E27D4576225F00A94E /* Pods-My TPI.debug.xcconfig */,
+				5C4861A42032770EA884BCEF /* Pods-My TPI.release.xcconfig */,
+				642B5B076ECBA8C48A8D99A3 /* Pods-My TPITests.debug.xcconfig */,
+				E145987B706862FB8194DF5F /* Pods-My TPITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9ED6E72411AB854E54294887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E22DA8EA67E24968C360EBEF /* Pods_My_TPI.framework */,
+				123A61043E3824C789945936 /* Pods_My_TPITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		553F24A02051E81B00D751C6 /* My TPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553F24C12051E81B00D751C6 /* Build configuration list for PBXNativeTarget "My TPI" */;
+			buildPhases = (
+				AE3E9098A9ABEC82ACD3F82B /* [CP] Check Pods Manifest.lock */,
+				553F249D2051E81B00D751C6 /* Sources */,
+				553F249E2051E81B00D751C6 /* Frameworks */,
+				553F249F2051E81B00D751C6 /* Resources */,
+				A4A0B73D2D28378105DCA63E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My TPI";
+			productName = "My TPI";
+			productReference = 553F24A12051E81B00D751C6 /* My TPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		553F24B72051E81B00D751C6 /* My TPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553F24C42051E81B00D751C6 /* Build configuration list for PBXNativeTarget "My TPITests" */;
+			buildPhases = (
+				B378061F22CC3C898C97C8D4 /* [CP] Check Pods Manifest.lock */,
+				553F24B42051E81B00D751C6 /* Sources */,
+				553F24B52051E81B00D751C6 /* Frameworks */,
+				553F24B62051E81B00D751C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				553F24BA2051E81B00D751C6 /* PBXTargetDependency */,
+			);
+			name = "My TPITests";
+			productName = "My TPITests";
+			productReference = 553F24B82051E81B00D751C6 /* My TPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		553F24992051E81B00D751C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Joshua Colley";
+				TargetAttributes = {
+					553F24A02051E81B00D751C6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					553F24B72051E81B00D751C6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 553F24A02051E81B00D751C6;
+					};
+				};
+			};
+			buildConfigurationList = 553F249C2051E81B00D751C6 /* Build configuration list for PBXProject "My TPI" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 553F24982051E81B00D751C6;
+			productRefGroup = 553F24A22051E81B00D751C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				553F24A02051E81B00D751C6 /* My TPI */,
+				553F24B72051E81B00D751C6 /* My TPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		553F249F2051E81B00D751C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5523F300205B237900375A43 /* index.html in Resources */,
+				553F24B22051E81B00D751C6 /* LaunchScreen.storyboard in Resources */,
+				557C6DE92094FE55007B20D7 /* JCButtonsCell.xib in Resources */,
+				553F24AF2051E81B00D751C6 /* Assets.xcassets in Resources */,
+				5585F0B820968DC700112AF0 /* JCMiddleCell.xib in Resources */,
+				553F25022053658A00D751C6 /* JCTextFieldCell.xib in Resources */,
+				550079092093BF3E005FA251 /* pulse_loader.json in Resources */,
+				550079072093BF22005FA251 /* construction_site.json in Resources */,
+				5523F304205B3C0B00375A43 /* JCApplianceListCell.xib in Resources */,
+				553F24AA2051E81B00D751C6 /* Main.storyboard in Resources */,
+				5585F0B02096879C00112AF0 /* JCBottomCell.xib in Resources */,
+				5500790D20947F27005FA251 /* tick.json in Resources */,
+				5585F0B42096892300112AF0 /* JCTitleCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553F24B62051E81B00D751C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4A0B73D2D28378105DCA63E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-My TPI/Pods-My TPI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My TPI/Pods-My TPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE3E9098A9ABEC82ACD3F82B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My TPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B378061F22CC3C898C97C8D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My TPITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		553F249D2051E81B00D751C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5518BEA520544CCD005F240C /* JCApplianceListInteractor.swift in Sources */,
+				55A8892E205715E00065F485 /* Date.swift in Sources */,
+				557C6DE82094FE55007B20D7 /* JCButtonsCell.swift in Sources */,
+				550079052093BD6D005FA251 /* JCSplashVC.swift in Sources */,
+				5523F2F9205B096200375A43 /* JCApplianceReviewViewModel.swift in Sources */,
+				553F24D82051FD0A00D751C6 /* JCApplianceChecklistInteractor.swift in Sources */,
+				553F250720540D2E00D751C6 /* JCCoreDataHelper.swift in Sources */,
+				5523F2FE205B1ECD00375A43 /* JCPDFViewer.swift in Sources */,
+				553F24AD2051E81B00D751C6 /* My_TPI.xcdatamodeld in Sources */,
+				5585F0B32096892300112AF0 /* JCTitleCell.swift in Sources */,
+				5523F2EB205AF3DC00375A43 /* UIViewController.swift in Sources */,
+				5523F306205B3EAE00375A43 /* JCApplianceListViewModel.swift in Sources */,
+				5523F2FC205B0E3B00375A43 /* JCApplianceChecklistRepo.swift in Sources */,
+				55F8CAD32055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift in Sources */,
+				5523F303205B3C0B00375A43 /* JCApplianceListCell.swift in Sources */,
+				5585F0AF2096879C00112AF0 /* JCBottomCell.swift in Sources */,
+				553F24F42053285500D751C6 /* JCEnums.swift in Sources */,
+				553F250420536BFD00D751C6 /* JCTextField.swift in Sources */,
+				553F25012053658A00D751C6 /* JCTextFieldCell.swift in Sources */,
+				55A8893920589F440065F485 /* JCExpandableHeaderView.swift in Sources */,
+				5518BEA320544CA0005F240C /* JCApplianceListVC.swift in Sources */,
+				553F24A52051E81B00D751C6 /* AppDelegate.swift in Sources */,
+				5585F0B720968DC700112AF0 /* JCMiddleCell.swift in Sources */,
+				553F24D52051F31D00D751C6 /* JCApplianceChecklistVC.swift in Sources */,
+				5585F0BC2099088100112AF0 /* JCApplianceEnums.swift in Sources */,
+				5523F2EE205B04E500375A43 /* JCApplianceReviewVC.swift in Sources */,
+				5523F2F5205B087200375A43 /* JCApplianceReviewPresenter.swift in Sources */,
+				553F24CD2051E89D00D751C6 /* JCDashboardVC.swift in Sources */,
+				5523F2F3205B085800375A43 /* JCApplianceReviewInteractor.swift in Sources */,
+				55A88936205849BF0065F485 /* JCApplianceListPresenter.swift in Sources */,
+				55A88934205847A90065F485 /* JCDashboardInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		553F24B42051E81B00D751C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				553F24BD2051E81B00D751C6 /* My_TPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		553F24BA2051E81B00D751C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 553F24A02051E81B00D751C6 /* My TPI */;
+			targetProxy = 553F24B92051E81B00D751C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		553F24A82051E81B00D751C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				553F24A92051E81B00D751C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		553F24B02051E81B00D751C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				553F24B12051E81B00D751C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		553F24BF2051E81B00D751C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		553F24C02051E81B00D751C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		553F24C22051E81B00D751C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592445E27D4576225F00A94E /* Pods-My TPI.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 342JHW2A2U;
+				INFOPLIST_FILE = "My TPI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evercodetech.com.My-TPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		553F24C32051E81B00D751C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4861A42032770EA884BCEF /* Pods-My TPI.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 342JHW2A2U;
+				INFOPLIST_FILE = "My TPI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evercodetech.com.My-TPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		553F24C52051E81B00D751C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 642B5B076ECBA8C48A8D99A3 /* Pods-My TPITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 342JHW2A2U;
+				INFOPLIST_FILE = "My TPITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evercodetech.com.My-TPITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My TPI.app/My TPI";
+			};
+			name = Debug;
+		};
+		553F24C62051E81B00D751C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E145987B706862FB8194DF5F /* Pods-My TPITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 342JHW2A2U;
+				INFOPLIST_FILE = "My TPITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "evercodetech.com.My-TPITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My TPI.app/My TPI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		553F249C2051E81B00D751C6 /* Build configuration list for PBXProject "My TPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553F24BF2051E81B00D751C6 /* Debug */,
+				553F24C02051E81B00D751C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		553F24C12051E81B00D751C6 /* Build configuration list for PBXNativeTarget "My TPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553F24C22051E81B00D751C6 /* Debug */,
+				553F24C32051E81B00D751C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		553F24C42051E81B00D751C6 /* Build configuration list for PBXNativeTarget "My TPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				553F24C52051E81B00D751C6 /* Debug */,
+				553F24C62051E81B00D751C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		553F24AB2051E81B00D751C6 /* My_TPI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				553F24AC2051E81B00D751C6 /* My_TPI.xcdatamodel */,
+			);
+			currentVersion = 553F24AC2051E81B00D751C6 /* My_TPI.xcdatamodel */;
+			path = My_TPI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 553F24992051E81B00D751C6 /* Project object */;
+}

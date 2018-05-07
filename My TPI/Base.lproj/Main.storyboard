@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="XPg-8O-PNL">
+            <objects>
+                <viewController id="Y0k-Ev-JrZ" customClass="JCSplashVC" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lgv-VV-uGD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRG-Fd-PGt">
+                                <rect key="frame" x="112" y="509" width="150" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hI-cs-cPW">
+                                <rect key="frame" x="16" y="86" width="343" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Think Safe. Think My TPI" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z89-9Y-IUz">
+                                <rect key="frame" x="16" y="320" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <viewLayoutGuide key="safeArea" id="IaS-fz-fn3"/>
+                    </view>
+                    <connections>
+                        <outlet property="craneAnimationWrapper" destination="0hI-cs-cPW" id="mh5-Ai-e6F"/>
+                        <outlet property="loadingAnimationWrapper" destination="aRG-Fd-PGt" id="88T-ow-Ott"/>
+                        <outlet property="noticeTextView" destination="z89-9Y-IUz" id="xW3-qH-iKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGf-0I-Gae" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682.39999999999998" y="404.92610837438423"/>
+        </scene>
+        <!--DashboardVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JCDashboardVC" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xaq-HZ-Eri">
+                                <rect key="frame" x="45" y="693" width="284" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="CTA"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Appliances">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Nix-AR-EvP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="t3F-PW-YjC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLl-n3-R0K">
+                                <rect key="frame" x="45" y="618" width="284" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="CTA"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="New Inspection">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newInspection_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r7o-Lq-fkf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My TPI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yms-uN-ZRb">
+                                <rect key="frame" x="73" y="268" width="228" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="55"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VYL-3t-UkO">
+                                <rect key="frame" x="112.66666666666669" y="109" width="150" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="GxV-L5-gj7"/>
+                                    <constraint firstAttribute="width" constant="150" id="pbA-OK-k7f"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by EverCode Technologies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djb-hh-Kvf">
+                                <rect key="frame" x="16" y="341" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VYL-3t-UkO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aT6-Ux-Epc"/>
+                            <constraint firstItem="VYL-3t-UkO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="iVn-m7-dDh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3yB-B2-vBU"/>
+                    <connections>
+                        <outlet property="animationWrapper" destination="VYL-3t-UkO" id="dWV-2Q-Bxy"/>
+                        <outlet property="appliance_Button" destination="Xaq-HZ-Eri" id="RqY-xU-b7U"/>
+                        <outlet property="newInsepction_Button" destination="SLl-n3-R0K" id="3US-Cb-2ht"/>
+                        <segue destination="QFA-R7-Gil" kind="presentation" identifier="JCApplianceChecklistVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="qCQ-aT-eQg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="404.92610837438423"/>
+        </scene>
+        <!--Appliances-->
+        <scene sceneID="U1G-M5-R4s">
+            <objects>
+                <viewController id="Y8f-u9-a3H" customClass="JCApplianceListVC" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zzd-hy-QJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BrN-am-HDY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="applianceListCell" textLabel="kds-qM-kZ8" style="IBUITableViewCellStyleDefault" id="Tmr-YU-0ur" customClass="JCApplianceListCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tmr-YU-0ur" id="TFi-MN-iMA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kds-qM-kZ8">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" name="Primary"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BrN-am-HDY" firstAttribute="leading" secondItem="1Uc-8c-fAP" secondAttribute="leading" id="1wR-cA-gKe"/>
+                            <constraint firstItem="BrN-am-HDY" firstAttribute="trailing" secondItem="1Uc-8c-fAP" secondAttribute="trailing" id="33r-79-zVF"/>
+                            <constraint firstItem="BrN-am-HDY" firstAttribute="top" secondItem="1Uc-8c-fAP" secondAttribute="top" id="GVe-bi-605"/>
+                            <constraint firstAttribute="bottom" secondItem="BrN-am-HDY" secondAttribute="bottom" id="KAY-Os-j0P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1Uc-8c-fAP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Appliances" id="y1P-hS-F6F">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6qz-Eq-FGq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backButton_action:" destination="Y8f-u9-a3H" id="Vd1-Ra-7QX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="BrN-am-HDY" id="ZK6-oR-t6Y"/>
+                        <segue destination="QFA-R7-Gil" kind="show" identifier="List-ApplianceChecklistVC" action="showDetailViewController:sender:" id="mbQ-Gd-3SH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ww7-Xd-CoM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="791"/>
+        </scene>
+        <!--Checklist-->
+        <scene sceneID="doK-xx-bEf">
+            <objects>
+                <viewController id="I5G-ap-yIg" customClass="JCApplianceChecklistVC" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0rk-HG-GQb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gNj-O0-Dxg">
+                                <rect key="frame" x="0.0" y="60" width="375" height="664"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <color key="separatorColor" red="0.18907001609999999" green="0.29197010400000001" blue="0.38049021360000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textFieldCell" id="fVY-ae-qEh" customClass="JCTextFieldCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fVY-ae-qEh" id="GIs-4U-gXM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buttonsCell" id="Jzg-A6-iRy" customClass="JCButtonsCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jzg-A6-iRy" id="CWG-l7-3YC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bottomCell" id="yAZ-I8-DwW" customClass="JCBottomCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yAZ-I8-DwW" id="2t9-Md-0I5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleCell" id="8cu-9i-FqG" customClass="JCTitleCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cu-9i-FqG" id="vuT-SH-FWP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="middleCell" id="q7s-V4-cYR" customClass="JCMiddleCell" customModule="My_TPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="204" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q7s-V4-cYR" id="gDG-5e-foh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.2817348838" green="0.42719849939999999" blue="0.43929764630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEL-XP-s7E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Y-pK-7m1">
+                                        <rect key="frame" x="16" y="12.666666666666671" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="f4d-Tp-dTe"/>
+                                            <constraint firstAttribute="height" constant="35" id="ihF-0G-1tS"/>
+                                        </constraints>
+                                        <state key="normal" image="chevron-left">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previousChevronAction:" destination="I5G-ap-yIg" eventType="touchUpInside" id="2Bj-qe-xqt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJn-cV-1bT">
+                                        <rect key="frame" x="324" y="12.666666666666671" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Hkg-LH-IuT"/>
+                                            <constraint firstAttribute="width" constant="35" id="iL8-jR-gu6"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="chevron-right">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextChevronAction:" destination="I5G-ap-yIg" eventType="touchUpInside" id="1pg-yC-h6u"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G3A-ZY-10e">
+                                        <rect key="frame" x="82" y="8" width="211" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstItem="Q1Y-pK-7m1" firstAttribute="centerY" secondItem="jEL-XP-s7E" secondAttribute="centerY" id="87a-TZ-uzd"/>
+                                    <constraint firstItem="Q1Y-pK-7m1" firstAttribute="leading" secondItem="jEL-XP-s7E" secondAttribute="leading" constant="16" id="9JY-vq-OX1"/>
+                                    <constraint firstItem="dJn-cV-1bT" firstAttribute="centerY" secondItem="jEL-XP-s7E" secondAttribute="centerY" id="RDe-TS-kgJ"/>
+                                    <constraint firstAttribute="height" constant="60" id="iQS-Ej-gGl"/>
+                                    <constraint firstAttribute="trailing" secondItem="dJn-cV-1bT" secondAttribute="trailing" constant="16" id="xzn-pK-vhK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gNj-O0-Dxg" firstAttribute="trailing" secondItem="MaM-Yl-8D5" secondAttribute="trailing" id="0ed-75-Yyg"/>
+                            <constraint firstItem="jEL-XP-s7E" firstAttribute="trailing" secondItem="MaM-Yl-8D5" secondAttribute="trailing" id="8Io-D8-fa6"/>
+                            <constraint firstItem="jEL-XP-s7E" firstAttribute="leading" secondItem="MaM-Yl-8D5" secondAttribute="leading" id="CQ2-zh-rFV"/>
+                            <constraint firstItem="gNj-O0-Dxg" firstAttribute="top" secondItem="jEL-XP-s7E" secondAttribute="bottom" id="VYa-ES-mFs"/>
+                            <constraint firstItem="jEL-XP-s7E" firstAttribute="top" secondItem="MaM-Yl-8D5" secondAttribute="top" id="agb-3V-r1S"/>
+                            <constraint firstAttribute="bottom" secondItem="gNj-O0-Dxg" secondAttribute="bottom" id="fih-1g-2vb"/>
+                            <constraint firstItem="gNj-O0-Dxg" firstAttribute="leading" secondItem="MaM-Yl-8D5" secondAttribute="leading" id="v3n-Pz-WQL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MaM-Yl-8D5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checklist" id="O2i-2o-1GI">
+                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="VW1-pZ-w9q">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cancelBtn_action:" destination="I5G-ap-yIg" id="eQs-Sb-Jcu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="VOG-kQ-eZT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveBtn_action:" destination="I5G-ap-yIg" id="RW0-Lj-NoH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextChevron" destination="dJn-cV-1bT" id="V29-n0-Mfj"/>
+                        <outlet property="previousChevron" destination="Q1Y-pK-7m1" id="9Sz-95-LaG"/>
+                        <outlet property="tableView" destination="gNj-O0-Dxg" id="ZGq-RX-OLc"/>
+                        <outlet property="titleField" destination="G3A-ZY-10e" id="MnS-mc-oCn"/>
+                        <segue destination="xuf-4m-IWh" kind="show" identifier="JCApplianceReviewSegue" id="XoC-mc-WXY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tol-hu-iac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052" y="70.935960591133011"/>
+        </scene>
+        <!--Review-->
+        <scene sceneID="cif-ke-NYM">
+            <objects>
+                <viewController title="Review" id="xuf-4m-IWh" customClass="JCApplianceReviewVC" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="btE-Jc-G8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1B-7f-7hI">
+                                <rect key="frame" x="45" y="518" width="284" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Review Certificate">
+                                    <color key="titleColor" name="Primary"/>
+                                </state>
+                                <connections>
+                                    <action selector="newInspection_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDX-GI-LAC"/>
+                                    <action selector="reviewButton_action:" destination="xuf-4m-IWh" eventType="touchUpInside" id="zB3-Ja-SyB"/>
+                                    <segue destination="Eu7-zu-nqx" kind="show" id="qbb-I6-fG7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Primary"/>
+                        <viewLayoutGuide key="safeArea" id="4U6-Ku-2OP"/>
+                    </view>
+                    <connections>
+                        <outlet property="reviewButton" destination="o1B-7f-7hI" id="CSC-bl-m7N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWA-mr-EDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2848.8000000000002" y="70.935960591133011"/>
+        </scene>
+        <!--Viewer-->
+        <scene sceneID="Kht-Hr-joF">
+            <objects>
+                <viewController id="Eu7-zu-nqx" customClass="JCPDFViewer" customModule="My_TPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jAq-tr-THf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WDl-Ax-T1C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="pys-cW-eok"/>
+                    </view>
+                    <connections>
+                        <outlet property="webview" destination="WDl-Ax-T1C" id="7fn-ZM-brT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ije-gc-Lve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3624.8000000000002" y="70.935960591133011"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yLT-1Y-QVe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QFA-R7-Gil" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sjA-rL-qDX">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" name="Primary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I5G-ap-yIg" kind="relationship" relationship="rootViewController" id="f1x-Sm-KuT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTQ-Gu-aeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1241" y="71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f5w-RM-Bhq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nix-AR-EvP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Npa-ew-5eg">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Primary"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y8f-u9-a3H" kind="relationship" relationship="rootViewController" id="F6p-w1-ahT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btL-pi-Edt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="791"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron-left" width="24" height="24"/>
+        <image name="chevron-right" width="24" height="24"/>
+        <namedColor name="CTA">
+            <color red="0.29499998688697815" green="0.4779999852180481" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.13600000739097595" green="0.25699999928474426" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mbQ-Gd-3SH"/>
+    </inferredMetricsTieBreakers>
+</document>

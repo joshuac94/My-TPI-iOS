@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="JCTextFieldCell" customModule="My_TPI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="74.666666666666671"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9C-fJ-lrR">
+                        <rect key="frame" x="6" y="4" width="308" height="68.666666666666671"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-IC-Ew1">
+                                <rect key="frame" x="8" y="8" width="292" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text Goes Here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gHf-1P-lbm" customClass="JCTextField" customModule="My_TPI" customModuleProvider="target">
+                                <rect key="frame" x="8" y="25.666666666666671" width="292" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="MzR-72-kHU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gHf-1P-lbm" firstAttribute="leading" secondItem="X9C-fJ-lrR" secondAttribute="leading" constant="8" id="7E6-FL-ope"/>
+                            <constraint firstItem="WcH-IC-Ew1" firstAttribute="leading" secondItem="X9C-fJ-lrR" secondAttribute="leading" constant="8" id="8Bz-Em-KSa"/>
+                            <constraint firstItem="WcH-IC-Ew1" firstAttribute="top" secondItem="X9C-fJ-lrR" secondAttribute="top" constant="8" id="9nw-iI-aSU"/>
+                            <constraint firstAttribute="trailing" secondItem="WcH-IC-Ew1" secondAttribute="trailing" constant="8" id="S19-8N-FT6"/>
+                            <constraint firstAttribute="bottom" secondItem="gHf-1P-lbm" secondAttribute="bottom" constant="8" id="ZKc-dG-Hbu"/>
+                            <constraint firstAttribute="trailing" secondItem="gHf-1P-lbm" secondAttribute="trailing" constant="8" id="nIQ-Q7-Ox5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="X9C-fJ-lrR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="40g-6d-e1p"/>
+                    <constraint firstAttribute="trailing" secondItem="X9C-fJ-lrR" secondAttribute="trailing" constant="6" id="7xM-RX-3tl"/>
+                    <constraint firstItem="X9C-fJ-lrR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="PZ0-hc-b7t"/>
+                    <constraint firstAttribute="bottom" secondItem="X9C-fJ-lrR" secondAttribute="bottom" constant="2" id="k3e-lX-4Uk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="WcH-IC-Ew1" id="3lL-nX-GG9"/>
+                <outlet property="valueTextField" destination="gHf-1P-lbm" id="f3q-kD-gAs"/>
+                <outlet property="wrapperView" destination="X9C-fJ-lrR" id="fX9-Rs-Feq"/>
+            </connections>
+            <point key="canvasLocation" x="-96" y="60.5"/>
+        </tableViewCell>
+    </objects>
+</document>
