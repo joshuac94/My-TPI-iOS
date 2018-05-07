@@ -30,6 +30,8 @@ class JCApplianceReviewVC: UIViewController {
         interactor.fetchInspectionData()
 
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        reviewButton.layer.cornerRadius = reviewButton.frame.height / 2
     }
 }
 
