@@ -89,6 +89,7 @@ class JCButtonsCell: UITableViewCell {
     func setButtonsToNeutral() {
         self.checklistButtons.forEach { (button) in
             button.backgroundColor = UIColor(named: "Grey")
+            button.setTitleColor(UIColor.lightGray, for: .normal)
         }
     }
     
@@ -110,12 +111,16 @@ class JCButtonsCell: UITableViewCell {
         switch selectedIndex {
         case .pass:
             self.checklistButtons[JCChecklistButtons.pass.rawValue].backgroundColor = UIColor(named: "Pass")
+            self.checklistButtons[JCChecklistButtons.pass.rawValue].setTitleColor(.white, for: .normal)
         case .fail:
             self.checklistButtons[JCChecklistButtons.fail.rawValue].backgroundColor = UIColor(named: "Fail")
+            self.checklistButtons[JCChecklistButtons.fail.rawValue].setTitleColor(.white, for: .normal)
         case .notAvailable:
             self.checklistButtons[JCChecklistButtons.notAvailable.rawValue].backgroundColor = UIColor(named: "NA")
+            self.checklistButtons[JCChecklistButtons.notAvailable.rawValue].setTitleColor(.white, for: .normal)
         case .notApplicable:
             self.checklistButtons[JCChecklistButtons.notApplicable.rawValue].backgroundColor = UIColor(named: "NA")
+            self.checklistButtons[JCChecklistButtons.notApplicable.rawValue].setTitleColor(.white, for: .normal)
         case .noSelection: setButtonsToNeutral()
         }
     }

@@ -51,6 +51,7 @@
 		55A88934205847A90065F485 /* JCDashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A88933205847A90065F485 /* JCDashboardInteractor.swift */; };
 		55A88936205849BF0065F485 /* JCApplianceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A88935205849BF0065F485 /* JCApplianceListPresenter.swift */; };
 		55A8893920589F440065F485 /* JCExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8893820589F440065F485 /* JCExpandableHeaderView.swift */; };
+		55DEB2D920A0EFAC003CFEE7 /* JCSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DEB2D820A0EFAC003CFEE7 /* JCSummaryVC.swift */; };
 		55F8CAD32055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F8CAD22055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift */; };
 		EDA5C9DCA94CF6F255A0FDB0 /* Pods_My_TPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22DA8EA67E24968C360EBEF /* Pods_My_TPI.framework */; };
 		FC3251059B257ABFF7D8B5A4 /* Pods_My_TPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123A61043E3824C789945936 /* Pods_My_TPITests.framework */; };
@@ -116,6 +117,7 @@
 		55A88933205847A90065F485 /* JCDashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCDashboardInteractor.swift; path = "My TPI/Classes/JCDashboardInteractor.swift"; sourceTree = SOURCE_ROOT; };
 		55A88935205849BF0065F485 /* JCApplianceListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceListPresenter.swift; path = "My TPI/Classes/JCApplianceListPresenter.swift"; sourceTree = SOURCE_ROOT; };
 		55A8893820589F440065F485 /* JCExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCExpandableHeaderView.swift; sourceTree = "<group>"; };
+		55DEB2D820A0EFAC003CFEE7 /* JCSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JCSummaryVC.swift; sourceTree = "<group>"; };
 		55F8CAD22055DA4400CDC2CA /* JCApplianceChecklistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JCApplianceChecklistPresenter.swift; path = "My TPI/Classes/JCApplianceChecklistPresenter.swift"; sourceTree = SOURCE_ROOT; };
 		592445E27D4576225F00A94E /* Pods-My TPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My TPI/Pods-My TPI.debug.xcconfig"; sourceTree = "<group>"; };
 		5C4861A42032770EA884BCEF /* Pods-My TPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My TPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-My TPI/Pods-My TPI.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		553F24C72051E84800D751C6 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				55DEB2D720A0EF91003CFEE7 /* Inspection Summary */,
 				5523F2EC205B04B400375A43 /* Appliance Review */,
 				5518BE9F20544C68005F240C /* Appliance List */,
 				553F24D02051F14F00D751C6 /* Appliance Checklist */,
@@ -375,6 +378,14 @@
 				55A8892D205715E00065F485 /* Date.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55DEB2D720A0EF91003CFEE7 /* Inspection Summary */ = {
+			isa = PBXGroup;
+			children = (
+				55DEB2D820A0EFAC003CFEE7 /* JCSummaryVC.swift */,
+			);
+			path = "Inspection Summary";
 			sourceTree = "<group>";
 		};
 		871EA4B5D4794CB6D0EFE42D /* Pods */ = {
@@ -570,6 +581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55DEB2D920A0EFAC003CFEE7 /* JCSummaryVC.swift in Sources */,
 				5518BEA520544CCD005F240C /* JCApplianceListInteractor.swift in Sources */,
 				55A8892E205715E00065F485 /* Date.swift in Sources */,
 				557C6DE82094FE55007B20D7 /* JCButtonsCell.swift in Sources */,

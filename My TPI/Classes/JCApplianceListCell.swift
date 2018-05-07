@@ -14,6 +14,7 @@ class JCApplianceListCell: UITableViewCell {
     @IBOutlet weak var assetNumber: UILabel!
     @IBOutlet weak var clientName: UILabel!
     @IBOutlet weak var wrapperView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -35,8 +36,15 @@ class JCApplianceListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setIcon(outcome: String) {
+    fileprivate func setIcon(outcome: String) {
         progressIcon.image = UIImage(named: outcome)
+    }
+    
+    func bindData(viewModel: JCApplianceListViewModel) {
+        setIcon(outcome: viewModel.iconString)
+        assetNumber.text = viewModel.assetNumber
+        clientName.text = viewModel.clientName
+        dateLabel.text = viewModel.date
     }
     
 }

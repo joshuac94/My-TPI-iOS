@@ -20,9 +20,10 @@ class JCApplianceListPresenter: JCApplianceListPresenterProtocol {
         let models = inspections.flatMap { (inspection) -> JCApplianceListViewModel? in
             let outcome = inspection.inspecionOutcome
             let model = JCApplianceListViewModel()
+            let hasFleet = inspection.fleetNumber != nil && inspection.fleetNumber != ""
             
             model.inspectionID = inspection.inspectionID
-            model.assetNumber = inspection.fleetNumber == "" ? inspection.fleetNumber : inspection.serialNumber
+            model.assetNumber = !hasFleet ? inspection.serialNumber : inspection.fleetNumber
             model.clientName = inspection.clientName
             model.date = inspection.dateOfInspection ?? ""
             model.iconString = outcome ?? "Incomplete"
