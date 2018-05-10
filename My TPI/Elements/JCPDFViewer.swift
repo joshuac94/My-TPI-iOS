@@ -101,6 +101,7 @@ class JCPDFViewer: UIViewController {
     
     fileprivate func setupPageOne(inspection: ApplianceInspection) -> String {
         var htmlString = getHTMLString(fileName: "index")
+        
         htmlString = htmlString.replacingOccurrences(of: "@%INSPECTIONTYPE", with: inspection.inspectionType ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%CERTNO", with: inspection.inspectionNumber ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%TIMESHEET", with: inspection.timesheetRef ?? "")
@@ -113,11 +114,73 @@ class JCPDFViewer: UIViewController {
         htmlString = htmlString.replacingOccurrences(of: "@%LASTEXAMCERT", with: inspection.previousExamCert ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%LASTTESTCERT", with: inspection.previousTestCert ?? "")
         
+        htmlString = htmlString.replacingOccurrences(of: "@%DESCRIPTION", with: inspection.equipmentDescription ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%REGNO", with: inspection.registration ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%FLEET", with: inspection.fleetNumber ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%SERIAL", with: inspection.serialNumber ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%MODEL", with: inspection.model ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%MAKE", with: inspection.make ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%SWL", with: inspection.capacity ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%HOURS", with: inspection.workingHours ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%MILEAGE", with: inspection.mileageReading ?? "")
+        
+        htmlString = htmlString.replacingOccurrences(of: "@%REASON", with: inspection.reasonForInspection ?? "")
+        
+        htmlString = htmlString.replacingOccurrences(of: "@%SWL1", with: inspection.swl1 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%SWL2", with: inspection.swl2 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%SWL3", with: inspection.swl3 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%SWL4", with: inspection.swl4 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LOAD1", with: inspection.appliedLoad1 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LOAD2", with: inspection.appliedLoad2 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LOAD3", with: inspection.appliedLoad3 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LOAD4", with: inspection.appliedLoad4 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%BOOM1", with: inspection.boomLength1 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%BOOM2", with: inspection.boomLength2 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%BOOM3", with: inspection.boomLength3 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%BOOM4", with: inspection.boomLength4 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%RADIUS1", with: inspection.radius1 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%RADIUS2", with: inspection.radius2 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%RADIUS3", with: inspection.radius3 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%RADIUS4", with: inspection.radius4 ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%EXTRAINFO", with: inspection.testingInfo ?? "")
+        
+        htmlString = htmlString.replacingOccurrences(of: "@%DEFECTS", with: inspection.overallDefects ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%RECOMMENDATIONS", with: inspection.recommendations ?? "")
+        
+        htmlString = htmlString.replacingOccurrences(of: "@%RESULT", with: inspection.inspecionOutcome?.uppercased() ?? "")
+        
+        htmlString = htmlString.replacingOccurrences(of: "@%NEXTEXAM", with: inspection.nextExam ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NEXTTEST", with: inspection.nextTest ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%INSPECTOR", with: inspection.inspectorsName ?? "")
+        
         // Funky stuff to refactor
         let client = "\(inspection.clientName ?? ""), \(inspection.clientAddress ?? "")"
         htmlString = htmlString.replacingOccurrences(of: "@%CLIENTDETAILS", with: client)
         
+        let info1 = detailsAnswer(answer: inspection.isFirstTest ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%YES1", with: info1["Yes"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NA1", with: info1["NA"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NO1", with: info1["No"] ?? "")
+        
+        let info2 = detailsAnswer(answer: inspection.isInstalledCorrectly ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%YES2", with: info2["Yes"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NA2", with: info2["NA"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NO2", with: info2["No"] ?? "")
+        
         return htmlString
+    }
+    
+    fileprivate func detailsAnswer(answer: String) -> [String: String] {
+        var dict: [String: String] = [:]
+        
+        switch answer {
+        case "Yes": dict = ["Yes": "Yes", "NA": "-", "No": "-"]
+        case "Not Applicable": dict = ["Yes": "-", "NA": "Not Applicable", "No": "-"]
+        case "No": dict = ["Yes": "-", "NA": "-", "No": "No"]
+        default: dict = ["Yes": "", "NA": "", "No": ""]
+        }
+        
+        return dict
     }
 }
 

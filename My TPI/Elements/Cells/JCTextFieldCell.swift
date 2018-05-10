@@ -65,6 +65,8 @@ extension JCTextFieldCell {
     }
     
     fileprivate func addKeyboardTarget() {
+        valueTextField.inputView = nil
+        valueTextField.reloadInputViews()
         valueTextField.addTarget(self, action: #selector(changedTextValue(_:)), for: .editingChanged)
     }
 }
