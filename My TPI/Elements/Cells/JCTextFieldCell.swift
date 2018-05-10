@@ -11,6 +11,7 @@ import UIKit
 @objc protocol JCTextFieldInputDelegate {
     @objc func didSelectDatePicker()
     @objc func didSelectPicker()
+    @objc func didChangeText(text: String, row: Int)
 }
 
 class JCTextFieldCell: UITableViewCell {
@@ -20,11 +21,12 @@ class JCTextFieldCell: UITableViewCell {
     @IBOutlet weak var wrapperView: UIView!
     
     var inputDelegate: JCTextFieldInputDelegate?
+    var row: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         valueTextField.setupTextField()
-        
+
         wrapperView.layer.cornerRadius = 5.0
         wrapperView.layer.shadowRadius = 0.45
         wrapperView.layer.shadowColor = UIColor.lightGray.cgColor
@@ -39,16 +41,32 @@ class JCTextFieldCell: UITableViewCell {
     func bindData(viewModel: JCApplianceRowViewModel) {
         self.titleLabel.text = viewModel.name
         self.valueTextField.text = viewModel.value
+        self.row = valueTextField.tag
         
-        if viewModel.inputType == .datePicker {
-            let datePicker = UIDatePicker()
-            datePicker.datePickerMode = .date
-            datePicker.addTarget(self, action: #selector(changedDateValue(_:)), for: .valueChanged)
-            self.valueTextField.inputView = datePicker
-            self.valueTextField.inputAccessoryView = self.setupToolbar(title: "Select a Date: ", picker: .datePicker)
+        switch viewModel.inputType {
+        case .datePicker: addDatePickerTarget()
+        case .keyboard: addKeyboardTarget()
+        case .picker: break
+        case .none: break
         }
     }
+}
+
+
+// MARK: - Helper Methods
+extension JCTextFieldCell {
+    fileprivate func addDatePickerTarget() {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.addTarget(self, action: #selector(changedDateValue(_:)), for: .valueChanged)
+        
+        self.valueTextField.inputView = datePicker
+        self.valueTextField.inputAccessoryView = self.setupToolbar(title: "Select a Date: ", picker: .datePicker)
+    }
     
+    fileprivate func addKeyboardTarget() {
+        valueTextField.addTarget(self, action: #selector(changedTextValue(_:)), for: .editingChanged)
+    }
 }
 
 
@@ -93,6 +111,11 @@ extension JCTextFieldCell {
     @objc fileprivate func changedDateValue(_ sender: UIDatePicker) {
         let text = sender.date.displayString()
         self.valueTextField.text = text
+    }
+    
+    @objc fileprivate func changedTextValue(_ sender: JCTextField) {
+        let text = sender.text ?? ""
+        inputDelegate?.didChangeText(text: text, row: self.row)
     }
     
 }
