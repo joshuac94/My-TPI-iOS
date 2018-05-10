@@ -37,6 +37,7 @@
         <attribute name="covers" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="creeping" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cylinders" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dangerToPersons" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dataPlate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateOfInspection" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="decals" optional="YES" attributeType="String" syncable="YES"/>
@@ -103,6 +104,7 @@
         <attribute name="previousExamDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="previousTestCert" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="previousTestDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="proofLoadTest" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="radius1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="radius2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="radius3" optional="YES" attributeType="String" syncable="YES"/>
@@ -125,6 +127,8 @@
         <attribute name="swl4" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="termination" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="testingInfo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testWithoutLoad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="testWithSWL" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tiltingAlarms" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timesheetRef" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tracks" optional="YES" attributeType="String" syncable="YES"/>
@@ -141,6 +145,6 @@
         <attribute name="workingHours" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ApplianceInspection" positionX="-1287" positionY="144" width="128" height="2113"/>
+        <element name="ApplianceInspection" positionX="-1287" positionY="144" width="128" height="2175"/>
     </elements>
 </model>

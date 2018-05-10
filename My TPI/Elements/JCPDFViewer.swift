@@ -81,8 +81,9 @@ class JCPDFViewer: UIViewController {
     // MARK: - Email PDF
     func showMailComposer(attachmentFilepath: String) {
         if MFMailComposeViewController.canSendMail() {
-            let subject = "Subject Text"
-            let message = "Message Goes Here."
+            let assetNumber = inspection.fleetNumber == "" || inspection.fleetNumber == nil ? inspection.serialNumber : inspection.fleetNumber
+            let subject = "Certificate for \(assetNumber ?? "")"
+            let message = "Message Goes Here"
             
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
@@ -146,12 +147,14 @@ class JCPDFViewer: UIViewController {
         
         htmlString = htmlString.replacingOccurrences(of: "@%DEFECTS", with: inspection.overallDefects ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%RECOMMENDATIONS", with: inspection.recommendations ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%DANGER", with: inspection.dangerToPersons ?? "")
         
         htmlString = htmlString.replacingOccurrences(of: "@%RESULT", with: inspection.inspecionOutcome?.uppercased() ?? "")
         
         htmlString = htmlString.replacingOccurrences(of: "@%NEXTEXAM", with: inspection.nextExam ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%NEXTTEST", with: inspection.nextTest ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%INSPECTOR", with: inspection.inspectorsName ?? "")
+        
         
         // Funky stuff to refactor
         let client = "\(inspection.clientName ?? ""), \(inspection.clientAddress ?? "")"
@@ -166,6 +169,21 @@ class JCPDFViewer: UIViewController {
         htmlString = htmlString.replacingOccurrences(of: "@%YES2", with: info2["Yes"] ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%NA2", with: info2["NA"] ?? "")
         htmlString = htmlString.replacingOccurrences(of: "@%NO2", with: info2["No"] ?? "")
+        
+        let info3 = detailsAnswer(answer: inspection.testWithoutLoad ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%YES3", with: info3["Yes"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NA3", with: info3["NA"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NO3", with: info3["No"] ?? "")
+        
+        let info4 = detailsAnswer(answer: inspection.testWithSWL ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%YES4", with: info4["Yes"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NA4", with: info4["NA"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NO4", with: info4["No"] ?? "")
+        
+        let info5 = detailsAnswer(answer: inspection.proofLoadTest ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%YES5", with: info5["Yes"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NA5", with: info5["NA"] ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%NO5", with: info5["No"] ?? "")
         
         return htmlString
     }

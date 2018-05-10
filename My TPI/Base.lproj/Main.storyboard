@@ -477,6 +477,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-8f-Dcj">
                                         <rect key="frame" x="276" y="15" width="22" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="E"/>
                                         <state key="highlighted" title="|">
                                             <color key="titleColor" name="CTA"/>
                                         </state>

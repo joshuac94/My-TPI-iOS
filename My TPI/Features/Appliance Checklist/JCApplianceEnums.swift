@@ -402,6 +402,9 @@ enum JCTestingRows: Int, CustomStringConvertible {
     case boomLength4
     case radius4
     
+    case testWithoutLoad
+    case testWithSWL
+    case proofLoadTest
     case testingInfo
     case creeping
     case count
@@ -434,6 +437,11 @@ enum JCTestingRows: Int, CustomStringConvertible {
         case .title4: return "Test 4 (for Aux. Hoist if applicable)"
         case .testingInfo: return "Additional Test Info."
         case .creeping: return "Observed Creeping"
+        
+        case .testWithoutLoad: return "Full Functional Test with No Load carried out?"
+        case .testWithSWL: return "Full Functional Test with SWL carried out?"
+        case .proofLoadTest: return "Proof Load Test Carried Out?"
+        
         default: return ""
         }
     }
@@ -444,6 +452,7 @@ enum JCApplianceSummaryRows: Int, CustomStringConvertible {
     case inspectionOutcome
     case recommendations
     case overallDefects
+    case dangerToPersons
     case nextExam
     case nextTest
     case count
@@ -453,6 +462,7 @@ enum JCApplianceSummaryRows: Int, CustomStringConvertible {
         case .inspectionOutcome: return "Inspection Outcome"
         case .recommendations: return "Recommendations"
         case .overallDefects: return "Overall Defect"
+        case .dangerToPersons: return "Are the defects of immediate danger?"
         case .nextExam: return "Next Exam Date"
         case .nextTest: return "Next Test Date"
         default: return ""

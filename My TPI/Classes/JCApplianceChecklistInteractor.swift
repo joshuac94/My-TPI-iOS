@@ -251,6 +251,10 @@ class JCApplianceChecklistInteractor: JCApplianceChecklistInteractorProtocol {
             case .appliedLoad4: inspection.appliedLoad4 = text
             case .boomLength4: inspection.boomLength4 = text
             case .radius4: inspection.radius4 = text
+            
+            case .testWithoutLoad: inspection.testWithoutLoad = text
+            case .testWithSWL: inspection.testWithSWL = text
+            case .proofLoadTest: inspection.proofLoadTest = text
                 
             case .testingInfo: inspection.testingInfo = text
             case .creeping: inspection.creeping = text
@@ -265,6 +269,7 @@ class JCApplianceChecklistInteractor: JCApplianceChecklistInteractorProtocol {
             case .inspectionOutcome: inspection.inspecionOutcome = text
             case .recommendations: inspection.recommendations = text
             case .overallDefects: inspection.overallDefects = text
+            case .dangerToPersons: inspection.dangerToPersons = text
             case .nextExam: inspection.nextExam = text
             case .nextTest: inspection.nextTest = text
             default: break
