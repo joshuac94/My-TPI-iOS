@@ -33,12 +33,20 @@ class JCApplianceReviewVC: UIViewController {
         
         reviewButton.layer.cornerRadius = reviewButton.frame.height / 2
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier, id == "presentWebview" {
+            guard let vc = segue.destination as? JCPDFViewer else { return }
+            vc.inspection = interactor.inspection
+        }
+    }
 }
 
 // MARK: Actions
 extension JCApplianceReviewVC {
     
     @IBAction func reviewButton_action(_ sender: Any) {
+        performSegue(withIdentifier: "presentWebview", sender: self)
     }
 }
 

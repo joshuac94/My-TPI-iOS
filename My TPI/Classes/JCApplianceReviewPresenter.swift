@@ -16,7 +16,7 @@ class JCApplianceReviewPresenter: JCApplianceReviewPresenterProtocol {
     var view: JCApplianceReviewViewProtocol!
     
     func presentInspectionData(appliance: ApplianceInspection) {
-        var viewModel = JCApplianceReviewViewModel()
+        let viewModel = JCApplianceReviewViewModel()
         
 //        let outcome = JCInspectionOutcome(rawValue: Int(appliance.inspecionOutcome!)!)?.description ?? JCInspectionOutcome.incomplete.description
 //        viewModel.outcome = outcome

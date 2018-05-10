@@ -185,7 +185,7 @@ extension JCApplianceChecklistVC: UITableViewDataSource {
                 textFieldCell.valueTextField.delegate = self
                 textFieldCell.inputDelegate = self
                 textFieldCell.valueTextField.tag = indexPath.row
-                textFieldCell.bindData(viewModel: rowModel, row: indexPath.row)
+                textFieldCell.bindData(viewModel: rowModel)
                 return textFieldCell
             }
             
@@ -324,6 +324,7 @@ extension JCApplianceChecklistVC: JCButtonsCellDelegate {
 
 // MARK: - Date Picker Method
 extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
+    
     fileprivate func setupToolbar(title: String, picker: JCInputType) -> UIToolbar {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         toolbar.barTintColor = UIColor.darkGray
@@ -358,11 +359,7 @@ extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
         self.dismissKeyboard()
     }
     
-    @objc func didSelectDatePicker(row: Int, text: String) {
-        interactor.saveData(delegate: appDelegate,
-                            row: row,
-                            section: currentSection,
-                            text: text)
+    @objc func didSelectDatePicker() {
         self.dismissKeyboard()
     }
 }

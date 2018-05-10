@@ -17,203 +17,8 @@ enum MIMEType: String {
 class JCPDFViewer: UIViewController {
 
     @IBOutlet var webview: WKWebView!
-    
-    var page1: String = """
-<div style="width: 596px; height: 841.0px; background: yellow">
-    <h1 style="margin-top: 50px;">CERTIFICATE</h1>
-    <h3 style="margin-top: 5px;">of Thorough Examination of Lifting Appliance</h3>
-    
-    <table style="width:calc(100% - 50px); margin: 15px 35px 0 25px; font-size: 14px;">
-    <tbody style="width: 100%">
-    <tr>
-    <th colspan="3">Certificate No.:</th>
-    <td colspan="3"></td>
-    <th colspan="3">Examination Date:</th>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Client:</th>
-    <th colspan="3">Location:</th>
-    <th colspan="3">Standard:</th>
-    </tr>
-    <tr>
-    <td colspan="6"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="6"></td>
-    <th colspan="3">Make &amp; Year: </th>
-    <th colspan="3">Capacity:</th>
-    </tr>
-    <tr>
-    <td colspan="6"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <th colspan="3">Reg. No.:</th>
-    <th colspan="3">Fleet No.:</th>
-    <th colspan="3">Serial No.:</th>
-    <th colspan="3">Model No.:</th>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <th colspan="4">Lifting Appliance Description:</th>
-    <td colspan="8"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="12">Details of Test &amp; Examination Carried Out</td>
-    </tr>
-    <tr>
-    <th colspan="6">First Exam/Test after Installation/Assembly</th>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Was the Equipment Installed Correctly</th>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Thorough Examination: Full Functional Test with No Load</th>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Thorough Examination: Full Functional Test with SWL</th>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Proof Load Test Carried Out</th>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    <td colspan="2"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Reason for Examination</th>
-    <td colspan="6"></td>
-    </tr>
-    <tr>
-    <td colspan="12">Load Test Applied (Forth Row for Auxiliary Hoist if Applicable)</td>
-    </tr>
-    <tr>
-    <td colspan="3">SWL</td>
-    <td colspan="3">Applied Load</td>
-    <td colspan="3">Boom Length</td>
-    <td colspan="3">Radius</td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <th colspan="4">Additional Test Information:</th>
-    <td colspan="8"></td>
-    </tr>
-    <tr>
-    <th colspan="12">Defects Found: </th>
-    </tr>
-    <tr>
-    <td colspan="12"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Are the defects above of immediate danger to persons:</th>
-    <td colspan="6"></td>
-    </tr>
-    <tr>
-    <th colspan="12">Recommendations Given: </th>
-    </tr>
-    <tr>
-    <td colspan="12"></td>
-    </tr>
-    <tr>
-    <th colspan="6">Result of Examination:</th>
-    <td colspan="6"></td>
-    </tr>
-    <tr>
-    <td colspan="3">Date of Late Examination</td>
-    <td colspan="3">Date of Next Examination</td>
-    <td colspan="3">Date of Last Load Test</td>
-    <td colspan="3">Date of Next Load Test</td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    <td colspan="3"></td>
-    </tr>
-    <tr>
-    <th colspan="3">Timesheet: </th>
-    <td colspan="3"></td>
-    <th colspan="3">Issue Date: </th>
-    <td colspan="3"></td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-"""
-    
+    var inspection: ApplianceInspection!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Review"
@@ -221,7 +26,9 @@ class JCPDFViewer: UIViewController {
         let RBB = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(savePDF))
         self.navigationItem.rightBarButtonItem = RBB
         
-        self.webview.loadHTMLString(getHTMLString(fileName: "index"), baseURL: nil)
+        let html = setupPageOne(inspection: self.inspection)
+        self.webview.loadHTMLString(html, baseURL: nil)
+//        getHTMLString(fileName: "index")
         
     }
     
@@ -248,7 +55,8 @@ class JCPDFViewer: UIViewController {
         printRenderer.setValue(A4Page, forKey: "printableRect")
         printRenderer.setValue(A4Page, forKey: "paperRect")
         
-        let formatter = UIMarkupTextPrintFormatter(markupText: getHTMLString(fileName: "index"))
+        let markup = setupPageOne(inspection: self.inspection)
+        let formatter = UIMarkupTextPrintFormatter(markupText: markup)
         printRenderer.addPrintFormatter(formatter, startingAtPageAt: 0)
         
         let pdfData = NSMutableData()
@@ -289,6 +97,27 @@ class JCPDFViewer: UIViewController {
                 return
             }
         }
+    }
+    
+    fileprivate func setupPageOne(inspection: ApplianceInspection) -> String {
+        var htmlString = getHTMLString(fileName: "index")
+        htmlString = htmlString.replacingOccurrences(of: "@%INSPECTIONTYPE", with: inspection.inspectionType ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%CERTNO", with: inspection.inspectionNumber ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%TIMESHEET", with: inspection.timesheetRef ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LOCATION", with: inspection.location ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LASTEXAMDATE", with: inspection.previousExamDate ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LASTTESTDATE", with: inspection.previousTestDate ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%DATE", with: inspection.dateOfInspection ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%ISSUEDATE", with: Date().displayString())
+        htmlString = htmlString.replacingOccurrences(of: "@%STANDARD", with: inspection.standards ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LASTEXAMCERT", with: inspection.previousExamCert ?? "")
+        htmlString = htmlString.replacingOccurrences(of: "@%LASTTESTCERT", with: inspection.previousTestCert ?? "")
+        
+        // Funky stuff to refactor
+        let client = "\(inspection.clientName ?? ""), \(inspection.clientAddress ?? "")"
+        htmlString = htmlString.replacingOccurrences(of: "@%CLIENTDETAILS", with: client)
+        
+        return htmlString
     }
 }
 

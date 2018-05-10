@@ -358,7 +358,6 @@
                                 <connections>
                                     <action selector="newInspection_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDX-GI-LAC"/>
                                     <action selector="reviewButton_action:" destination="xuf-4m-IWh" eventType="touchUpInside" id="zB3-Ja-SyB"/>
-                                    <segue destination="Eu7-zu-nqx" kind="show" id="qbb-I6-fG7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,6 +366,7 @@
                     </view>
                     <connections>
                         <outlet property="reviewButton" destination="o1B-7f-7hI" id="CSC-bl-m7N"/>
+                        <segue destination="Eu7-zu-nqx" kind="show" identifier="presentWebview" id="AiG-jb-QZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWA-mr-EDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -610,9 +610,6 @@
     <resources>
         <image name="chevron-left" width="24" height="24"/>
         <image name="chevron-right" width="24" height="24"/>
-        <namedColor name="CTA">
-            <color red="0.29499998688697815" green="0.4779999852180481" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <namedColor name="CTA">
             <color red="0.29499998688697815" green="0.4779999852180481" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
