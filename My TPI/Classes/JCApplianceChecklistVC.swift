@@ -249,6 +249,7 @@ extension JCApplianceChecklistVC: UITableViewDelegate {
         case .title: return 40
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
