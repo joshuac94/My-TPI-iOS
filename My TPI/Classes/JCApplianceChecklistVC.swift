@@ -58,7 +58,6 @@ class JCApplianceChecklistVC: UIViewController {
         
         currentSection = 0
         
-        
         sectionPicker.delegate = self
         titleField.inputView = sectionPicker
         titleField.inputAccessoryView = self.setupToolbar(title: "Select a Section: ", picker: .picker)
@@ -72,7 +71,6 @@ class JCApplianceChecklistVC: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
-        
     }
     
     // MARK: - Helper Methods
@@ -243,7 +241,6 @@ extension JCApplianceChecklistVC: UITableViewDataSource {
 extension JCApplianceChecklistVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         switch viewModel.sections[currentSection].rows[indexPath.row].cellType {
         case .buttons: return 135
         case .textField: return 75
@@ -252,6 +249,7 @@ extension JCApplianceChecklistVC: UITableViewDelegate {
         case .title: return 40
         }
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
     }
@@ -347,6 +345,13 @@ extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
         toolbar.items = [labelItem, space, done]
         
         return toolbar
+    }
+    
+    func didChangeText(text: String, row: Int) {
+        interactor.saveData(delegate: appDelegate,
+                            row: row,
+                            section: currentSection,
+                            text: text)
     }
     
     @objc func didSelectPicker() {
