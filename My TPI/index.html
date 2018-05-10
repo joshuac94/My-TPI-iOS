@@ -1,39 +1,219 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-            <title></title>
-            </head>
-    <body>
-        <div>
-            <h1 style="margin-top:1em">CERTIFICATE</h1>
-            <h3 style="margin-top:.2em">of Thorough Examination of Lifting Appliance</h3>
 
-            <table style="width:calc(100% - 50px); margin: 50px 25px 0 25px;">
-                <tr>
-                    <th style="width: 25%">Cert No.:</th>
-                    <td style="width: 25%">0010001</td>
-                    <th style="width: 25%">Date of Inspection:</th>
-                    <td style="width: 25%">12 Dec 2018</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Telephone:</th>
-                    <td>55577854</td>
-                </tr>
-            </table>
-            
-        </div>
-        
-        
-        
-        <style>
-            * {font-family:verdana; padding: 0px; margin: 0px;}
-            h1, h3 {text-align: center;}
-            h1 {font-weight: 700; }
-            h3 {color:red;}
-            table, th, td {border: 1px solid black; border-collapse: collapse;}
-            th, td {padding: 5px; text-align: left;}
-        </style>
-    </body>
-</html>
+<div style="width: 596px; height: 841.0px; padding-top: 45px;background: white">
+    <table style="width:calc(100% - 50px); margin: 0px 25px 0 25px; font-size: 14px;">
+        <tbody style="width: 100%">
+            <tr>
+                <td class="bg top left right header" colspan="12">CERTIFICATE</td>
+            </tr>
+            <tr>
+                <td class="bg right left subheader" colspan="12">of @%INSPECTIONTYPE of Lifting Appliance</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Client Details:</th>
+                <td class="top right bold" colspan="9">@%CLIENTDETAILS</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Certificate No.:</th>
+                <td class="top right bold" colspan="3">@%CERTNO</td>
+                <th class="top right" colspan="3">Examination Date:</th>
+                <td class="top right bold" colspan="3">@%DATE</td>
+            </tr>
+            <tr>
+                <th class="full" colspan="3">Timesheet: </th>
+                <td class="top right" colspan="3">@%TIMESHEET</td>
+                <th class="top right" colspan="3">Issue Date: </th>
+                <td class="top right" colspan="3">@%ISSUEDATE</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Location:</th>
+                <td class="top right" colspan="3">@%LOCATION</td>
+                <th class="top right" colspan="3">Standard:</th>
+                <td class="top right" colspan="3">@%STANDARD</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Last Exam Date:</th>
+                <td class="top right" colspan="3">@%LASTEXAMDATE</td>
+                <th class="top right" colspan="3">Last Exam Certificate:</th>
+                <td class="top right" colspan="3">@%LASTEXAMCERT</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Last Test Date:</th>
+                <td class="top right" colspan="3">@%LASTTESTDATE</td>
+                <th class="top right" colspan="3">Last Test Certificate:</th>
+                <td class="top right" colspan="3">@%LASTTESTCERT</td>
+            </tr>
+            <tr>
+                <td class="bg top right left" colspan="12">Equipment Details</td>
+            </tr>
+            <tr>
+                <th style="padding: 4px 0px" class="top left right" colspan="3">Lifting Appliance Description:</th>
+                <td style="padding: 4px 0px" class="top right bold" colspan="9">@%DESCRIPTION</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Reg. No.:</th>
+                <th class="top right" colspan="3">Fleet No.:</th>
+                <th class="top right" colspan="3">Serial No.:</th>
+                <th class="top right" colspan="3">Model No.:</th>
+            </tr>
+            <tr>
+                <td class="left right bold" colspan="3">@%REGNO</td>
+                <td class="right bold" colspan="3">@%FLEET</td>
+                <td class="right bold" colspan="3">@%SERIAL</td>
+                <td class="right bold" colspan="3">@%MODEL</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Make &amp; Year:</th>
+                <th class="top right" colspan="3">Capacity:</th>
+                <th class="top right" colspan="3">Working Hours:</th>
+                <th class="top right" colspan="3">Mileage Reading:</th>
+            </tr>
+            <tr>
+                <td class="left right bold" colspan="3">@%MAKE</td>
+                <td class="right bold" colspan="3">@%SWL</td>
+                <td class="right bold" colspan="3">@%HOURS</td>
+                <td class="right bold" colspan="3">@%MILEAGE</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">@%TITLE1</th>
+                <th class="top left right" colspan="6">@%TITLE2</th>
+            </tr>
+            <tr>
+                <td class="left right bold" colspan="6">@%DETAIL1</td>
+                <td class="left right bold" colspan="6">@%DETAIL2</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">@%TITLE3</th>
+                <th class="top left right" colspan="6">@%TITLE4</th>
+            </tr>
+            <tr>
+                <td class="left right bold" colspan="6">@%DETAIL3</td>
+                <td class="left right bold" colspan="6">@%DETAIL4</td>
+            </tr>
+            <tr>
+                <td class="bg top right left" colspan="12">Details of Test &amp; Examination Carried Out</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">First Exam/Test after Installation/Assembly</th>
+                <td class="top right bold" colspan="2">@%YES1</td>
+                <td class="top right bold" colspan="2">@%NA1</td>
+                <td class="top right bold" colspan="2">@%NO1</td>
+            </tr>
+            <tr>
+                <th class="top right left" colspan="6">Was the Equipment Installed Correctly</th>
+                <td class="top right bold" colspan="2">@%YES2</td>
+                <td class="top right bold" colspan="2">@%NA2</td>
+                <td class="top right bold" colspan="2">@%NO2</td>
+            </tr>
+            <tr>
+                <th class="top right left" colspan="6">Thorough Examination: Full Functional Test with No Load</th>
+                <td class="top right bold" colspan="2">@%YES3</td>
+                <td class="top right bold" colspan="2">@%NA3</td>
+                <td class="top right bold" colspan="2">@%NO3</td>
+            </tr>
+            <tr>
+                <th class="top right left" colspan="6">Thorough Examination: Full Functional Test with SWL</th>
+                <td class="top right bold" colspan="2">@%YES4</td>
+                <td class="top right bold" colspan="2">@%NA4</td>
+                <td class="top right bold" colspan="2">@%NO4</td>
+            </tr>
+            <tr>
+                <th class="top right left" colspan="6">Proof Load Test Carried Out</th>
+                <td class="top right bold" colspan="2">@%YES5</td>
+                <td class="top right bold" colspan="2">@%NA5</td>
+                <td class="top right bold" colspan="2">@%NO5</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">Reason for Examination</th>
+                <td class="top right bold" colspan="6">@%REASON</td>
+            </tr>
+            <tr>
+                <td class="bg top right left" colspan="12">Load Test Applied (Forth Row for Auxiliary Hoist if Applicable)</td>
+            </tr>
+            <tr>
+                <td class="top right left" colspan="3">SWL</td>
+                <td class="top right" colspan="3">Applied Load</td>
+                <td class="top right" colspan="3">Boom Length</td>
+                <td class="top right" colspan="3">Radius</td>
+            </tr>
+            <tr>
+                <td class="top right left bold" colspan="3">@%SWL1</td>
+                <td class="top right bold" colspan="3">@%LOAD1</td>
+                <td class="top right bold" colspan="3">@%BOOM1</td>
+                <td class="top right bold" colspan="3">@%RADIUS1</td>
+            </tr>
+            <tr>
+                <td class="top right left bold" colspan="3">@%SWL2</td>
+                <td class="top right bold" colspan="3">@%LOAD2</td>
+                <td class="top right bold" colspan="3">@%BOOM2</td>
+                <td class="top right bold" colspan="3">@%RADIUS2</td>
+            </tr>
+            <tr>
+                <td class="top right left bold" colspan="3">@%SWL3</td>
+                <td class="top right bold" colspan="3">@%LOAD3</td>
+                <td class="top right bold" colspan="3">@%BOOM3</td>
+                <td class="top right bold" colspan="3">@%RADIUS3</td>
+            </tr>
+            <tr>
+                <td class="top right left bold" colspan="3">@%SWL4</td>
+                <td class="top right bold" colspan="3">@%LOAD4</td>
+                <td class="top right bold" colspan="3">@%BOOM4</td>
+                <td class="top right bold" colspan="3">@%RADIUS4</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Additional Test Information:</th>
+                <td class="top right bold" colspan="9">@%EXTRAINFO</td>
+            </tr>
+            <tr>
+                <td class="bg top right left" colspan="12">Result of Test &amp; Examination Carried Out</td>
+            </tr>
+            <tr>
+                <th class="top right left" colspan="3">Defects Found: </th>
+                <td class="right top bold" colspan="9">@%DEFECTS</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="3">Recommendations Given: </th>
+                <td class="top right bold" colspan="9">@%RECOMMENDATIONS</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">Are the defects above of immediate danger to persons:</th>
+                <td class="top right bold" colspan="6">@%DANGER</td>
+            </tr>
+            <tr>
+                <th class="top left right" colspan="6">Result of Examination:</th>
+                <td class="top right bold red" colspan="6">@%RESULT</td>
+            </tr>
+            <tr>
+                <th class="full" colspan="3">Next Exam Date:</th>
+                <td class="top right bottom bold" colspan="3">@%NEXTEXAM</td>
+                <th class="top right bottom" colspan="3">Next Test Date:</th>
+                <td class="top right bottom bold" colspan="3">@%NEXTTEST</td>
+            </tr>
+            <tr>
+                <th style="padding: 4px 0" class="full" colspan="3">Inspector's Name:</th>
+                <td style="padding: 4px 0" class="top right bottom bold" colspan="3">@%INSPECTOR</td>
+                <th style="padding: 4px 0" class="top right bottom" colspan="3">Authorized Signature:</th>
+                <td style="padding: 4px 0" class="top right bottom bold" colspan="3"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<style>
+    * {font-family:verdana; padding: 0px; margin: 0px; font-size: 8px;}
+    .bg {background-color: #CFD8DC; font-size: 10px;}
+    .header {font-weight: 700; font-size: 20px;}
+    .subheader {font-size: 12px;}
+    table {height: 90%; table-layout: fixed;}
+    table, th, td {border-collapse: collapse;}
+    tr {width: 100%;}
+    th {padding: 0px; text-align: left; height: 10px; padding-left: 5px !important; font-weight: 300;}
+    td {padding: 0px; text-align: center; height: 10px;}
+    .top {border-top: 1px solid black;}
+    .left {border-left: 1px solid black;}
+    .right {border-right: 1px solid black;}
+    .bottom {border-bottom: 1px solid black;}
+    .full {border: 1px solid black;}
+    .bold {font-weight: bold;}
+    .red {color: red}
+    </style>
 

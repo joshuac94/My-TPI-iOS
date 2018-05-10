@@ -35,11 +35,10 @@ class JCCoreDataHelper {
         }
         let newObject = NSManagedObject(entity: entity, insertInto: context)
         let uuid = UUID().uuidString
+        let today = Date().displayString()
         newObject.setValue(uuid, forKey: "inspectionID")
         newObject.setValue("Incomplete", forKey: "inspecionOutcome")
-        newObject.setValue("Inspection Type", forKey: "inspectionType")
-        newObject.setValue("Satisfactory", forKey: "manual")
-        
+        newObject.setValue(today, forKey: "dateOfInspection")
         saveEntity(context: context)
         debugPrint("@Debug: Entity Created with ID: \(uuid)")
         return uuid
