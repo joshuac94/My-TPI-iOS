@@ -187,7 +187,7 @@ extension JCApplianceChecklistVC: UITableViewDataSource {
                 textFieldCell.valueTextField.delegate = self
                 textFieldCell.inputDelegate = self
                 textFieldCell.valueTextField.tag = indexPath.row
-                textFieldCell.bindData(viewModel: rowModel)
+                textFieldCell.bindData(viewModel: rowModel, row: indexPath.row)
                 return textFieldCell
             }
             
@@ -353,7 +353,11 @@ extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
         self.dismissKeyboard()
     }
     
-    @objc func didSelectDatePicker() {
+    @objc func didSelectDatePicker(row: Int, text: String) {
+        interactor.saveData(delegate: appDelegate,
+                            row: row,
+                            section: currentSection,
+                            text: text)
         self.dismissKeyboard()
     }
 }

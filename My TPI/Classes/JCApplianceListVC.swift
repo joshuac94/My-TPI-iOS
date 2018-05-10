@@ -64,7 +64,15 @@ extension JCApplianceListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndex = indexPath.row
-        performSegue(withIdentifier: "List-ApplianceChecklistVC", sender: self)
+        if viewModels[indexPath.row].iconString == JCInspectionOutcome.incomplete.rawValue {
+            performSegue(withIdentifier: "List-ApplianceChecklistVC", sender: self)
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "SummaryVC") as? JCSummaryVC {
+                vc.viewModel = viewModels[indexPath.row]
+                present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -100,9 +108,7 @@ extension JCApplianceListVC: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "applianceListCell") as? JCApplianceListCell else {
             return UITableViewCell()
         }
-        cell.assetNumber.text = viewModels[indexPath.row].assetNumber
-        cell.clientName.text = viewModels[indexPath.row].clientName
-        cell.setIcon(outcome: viewModels[indexPath.row].iconString)
+        cell.bindData(viewModel: viewModels[indexPath.row])
         return cell
     }
 }

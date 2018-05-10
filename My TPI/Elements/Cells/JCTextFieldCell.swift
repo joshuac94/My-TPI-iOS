@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol JCTextFieldInputDelegate {
-    @objc func didSelectDatePicker()
+    @objc func didSelectDatePicker(row: Int, text: String)
     @objc func didSelectPicker()
 }
 
@@ -20,6 +20,7 @@ class JCTextFieldCell: UITableViewCell {
     @IBOutlet weak var wrapperView: UIView!
     
     var inputDelegate: JCTextFieldInputDelegate?
+    var row: Int!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,9 +37,10 @@ class JCTextFieldCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func bindData(viewModel: JCApplianceRowViewModel) {
+    func bindData(viewModel: JCApplianceRowViewModel, row: Int) {
         self.titleLabel.text = viewModel.name
         self.valueTextField.text = viewModel.value
+        self.row = row
         
         if viewModel.inputType == .datePicker {
             let datePicker = UIDatePicker()
@@ -87,7 +89,7 @@ extension JCTextFieldCell {
     }
     
     @objc fileprivate func didSelectDatePicker() {
-        inputDelegate?.didSelectDatePicker()
+        inputDelegate?.didSelectDatePicker(row: self.row, text: self.valueTextField.text ?? "")
     }
     
     @objc fileprivate func changedDateValue(_ sender: UIDatePicker) {
