@@ -9,8 +9,7 @@
 import UIKit
 
 @objc protocol JCTextFieldInputDelegate {
-    @objc func didSelectDatePicker()
-    @objc func didSelectPicker()
+    @objc func didPressDone()
     @objc func didChangeText(text: String, row: Int)
 }
 
@@ -22,6 +21,7 @@ class JCTextFieldCell: UITableViewCell {
     
     var inputDelegate: JCTextFieldInputDelegate?
     var row: Int!
+    var inputType: JCInputType = .none
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,11 +42,16 @@ class JCTextFieldCell: UITableViewCell {
         self.titleLabel.text = viewModel.name
         self.valueTextField.text = viewModel.value
         self.row = valueTextField.tag
+        self.inputType = viewModel.inputType
         
-        switch viewModel.inputType {
+        switch self.inputType {
         case .datePicker: addDatePickerTarget()
         case .keyboard: addKeyboardTarget()
-        case .picker: break
+        case .typePicker: addPickerTarget()
+        case .reasonPicker: addPickerTarget()
+        case .questionPicker: addPickerTarget()
+        case .outcomePicker: break
+        case .equipmentPicker: addPickerTarget()
         case .none: break
         }
     }
@@ -66,8 +71,16 @@ extension JCTextFieldCell {
     
     fileprivate func addKeyboardTarget() {
         valueTextField.inputView = nil
+        valueTextField.inputAccessoryView = nil
         valueTextField.reloadInputViews()
         valueTextField.addTarget(self, action: #selector(changedTextValue(_:)), for: .editingChanged)
+    }
+    
+    fileprivate func addPickerTarget() {
+        let picker = UIPickerView()
+        picker.delegate = self
+        self.valueTextField.inputView = picker
+        self.valueTextField.inputAccessoryView = self.setupToolbar(title: "Select a Value: ", picker: .typePicker)
     }
 }
 
@@ -86,18 +99,10 @@ extension JCTextFieldCell {
         
         let labelItem = UIBarButtonItem(customView: label)
         var done: UIBarButtonItem!
-        
-        if picker == .datePicker {
-            done = UIBarButtonItem(title: "Done",
-                                   style: .done,
-                                   target: self,
-                                   action: #selector(didSelectDatePicker))
-        } else if picker == .picker {
-            done = UIBarButtonItem(title: "Done",
-                                   style: .done,
-                                   target: self,
-                                   action: #selector(inputDelegate?.didSelectPicker))
-        }
+        done = UIBarButtonItem(title: "Done",
+                               style: .done,
+                               target: self,
+                               action: #selector(didPressDone))
         
         done.tintColor = UIColor.white
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -106,8 +111,8 @@ extension JCTextFieldCell {
         return toolbar
     }
     
-    @objc fileprivate func didSelectDatePicker() {
-        inputDelegate?.didSelectDatePicker()
+    @objc fileprivate func didPressDone() {
+        inputDelegate?.didPressDone()
     }
     
     @objc fileprivate func changedDateValue(_ sender: UIDatePicker) {
@@ -116,8 +121,56 @@ extension JCTextFieldCell {
     }
     
     @objc fileprivate func changedTextValue(_ sender: JCTextField) {
-        let text = sender.text ?? ""
+        var text = sender.text ?? ""
+        text = text == "Please Select" ? "" : text
         inputDelegate?.didChangeText(text: text, row: self.row)
     }
+}
+
+
+// MARK: - Picker Delegate & Data Source
+extension JCTextFieldCell: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch self.inputType {
+        case .typePicker: return JCInspectionType.count.rawValue
+        case .keyboard: return 0
+        case .datePicker: return 0
+        case .reasonPicker: return JCReason.count.rawValue
+        case .questionPicker: return JCBasicResponse.count.rawValue
+        case .outcomePicker: return 0
+        case .equipmentPicker: return JCApplianceType.count.rawValue
+        case .none: return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch self.inputType {
+        case .typePicker: return JCInspectionType(rawValue: row)?.description
+        case .keyboard: return ""
+        case .datePicker: return ""
+        case .reasonPicker: return JCReason(rawValue: row)?.description
+        case .questionPicker: return JCBasicResponse(rawValue: row)?.description
+        case .outcomePicker: return ""
+        case .equipmentPicker: return JCApplianceType(rawValue: row)?.description
+        case .none: return ""
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        var text = ""
+        switch self.inputType {
+        case .typePicker: text = JCInspectionType(rawValue: row)?.description ?? ""
+        case .questionPicker: text = JCBasicResponse(rawValue: row)?.description ?? ""
+        case .reasonPicker: text = JCReason(rawValue: row)?.description ?? ""
+        case .equipmentPicker: text = JCApplianceType(rawValue: row)?.description ?? ""
+        default: break
+        }
+        text = text == "Please Select" ? "" : text
+        self.valueTextField.text = text
+        inputDelegate?.didChangeText(text: text, row: self.row)
+    }
 }

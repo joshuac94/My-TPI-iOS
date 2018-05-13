@@ -19,7 +19,11 @@ enum JCCellType {
 enum JCInputType {
     case keyboard
     case datePicker
-    case picker
+    case typePicker
+    case reasonPicker
+    case questionPicker
+    case outcomePicker
+    case equipmentPicker
     case none
 }
 
@@ -91,7 +95,7 @@ class JCApplianceChecklistPresenter: JCApplianceChecklistPresenterProtocol {
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.inspectionType.description,
                                     value: inspection.inspectionType ?? "",
                                     cellType: .textField,
-                                    inputType: .picker),
+                                    inputType: .typePicker),
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.clientName.description,
                                     value: inspection.clientName ?? "",
                                     cellType: .textField,
@@ -119,15 +123,15 @@ class JCApplianceChecklistPresenter: JCApplianceChecklistPresenterProtocol {
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.reasonForInspection.description,
                                     value: inspection.reasonForInspection ?? "",
                                     cellType: .textField,
-                                    inputType: .keyboard),
+                                    inputType: .reasonPicker),
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.isFirstTest.description,
                                     value: inspection.isFirstTest ?? "",
                                     cellType: .textField,
-                                    inputType: .keyboard),
+                                    inputType: .questionPicker),
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.isInstalledCorrectly.description,
                                     value: inspection.isInstalledCorrectly ?? "",
                                     cellType: .textField,
-                                    inputType: .keyboard),
+                                    inputType: .questionPicker),
             JCApplianceRowViewModel(name: JCInspectionDetailsRows.location.description,
                                     value: inspection.location ?? "",
                                     cellType: .textField,
@@ -180,8 +184,8 @@ class JCApplianceChecklistPresenter: JCApplianceChecklistPresenterProtocol {
                                     inputType: .keyboard),
             JCApplianceRowViewModel(name: JCDocumentationRows.maintenanceRecordsReference.description,
                                     value: inspection.maintenanceRecordsReference ?? "",
-                                    cellType: .textField,
-                                    inputType: .keyboard)
+                                    cellType: .buttons,
+                                    inputType: .none)
         ]
     }
     
@@ -191,7 +195,7 @@ class JCApplianceChecklistPresenter: JCApplianceChecklistPresenterProtocol {
             JCApplianceRowViewModel(name: JCMachineDetailsRows.equipmentType.description,
                                     value: inspection.equipmentType ?? "",
                                     cellType: .textField,
-                                    inputType: .keyboard),
+                                    inputType: .equipmentPicker),
             JCApplianceRowViewModel(name: JCMachineDetailsRows.fleetNumber.description,
                                     value: inspection.fleetNumber ?? "",
                                     cellType: .textField,
@@ -668,7 +672,7 @@ class JCApplianceChecklistPresenter: JCApplianceChecklistPresenterProtocol {
             JCApplianceRowViewModel(name: JCApplianceSummaryRows.inspectionOutcome.description,
                                     value: inspection.inspecionOutcome ?? "",
                                     cellType: .textField,
-                                    inputType: .picker),
+                                    inputType: .outcomePicker),
             JCApplianceRowViewModel(name: JCApplianceSummaryRows.recommendations.description,
                                     value: inspection.recommendations ?? "",
                                     cellType: .textField,

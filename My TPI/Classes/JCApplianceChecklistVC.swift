@@ -28,6 +28,8 @@ class JCApplianceChecklistVC: UIViewController {
     
     var appDelegate: AppDelegate!
     var viewModel: JCApplianceViewModel!
+
+    var isInset: Bool = false
     
     var currentSection: Int = 0 {
         didSet {
@@ -60,8 +62,7 @@ class JCApplianceChecklistVC: UIViewController {
         
         sectionPicker.delegate = self
         titleField.inputView = sectionPicker
-        titleField.inputAccessoryView = self.setupToolbar(title: "Select a Section: ", picker: .picker)
-        
+        titleField.inputAccessoryView = self.setupToolbar(title: "Select a Section: ", picker: .datePicker)
         
         // Swipe Gesture
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
@@ -72,12 +73,9 @@ class JCApplianceChecklistVC: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         
-        
-        // TEST
-//        NotificationCenter.default.addObserver( self, #selector(didShowKeyboard(_:)),
-//                                                name: UIKeyboardWillChangeFrameNotification, object: nil)
+        // Keyboard Notification
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(didShowKeyboard(_:)),
+                                               selector: #selector(adjustForKeyboard(_:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
     }
@@ -289,12 +287,18 @@ extension JCApplianceChecklistVC: UITextFieldDelegate {
         }
     }
     
-    @objc func didShowKeyboard(_ note: NSNotification) {
-        if let newFrame = (note.userInfo?[ UIKeyboardFrameEndUserInfoKey ] as? NSValue)?.cgRectValue {
-            let insets = UIEdgeInsetsMake( 0, 0, newFrame.height, 0 )
-            tableView.contentInset = insets
-            tableView.scrollIndicatorInsets = insets
+    
+    // TODO: - FIX !!!!!!!!
+    @objc func adjustForKeyboard(_ note: NSNotification) {
+        var insets = UIEdgeInsetsMake(0, 0, 0, 0)
+        if !isInset {
+            if let newFrame = (note.userInfo?[ UIKeyboardFrameEndUserInfoKey ] as? NSValue)?.cgRectValue {
+                insets = UIEdgeInsetsMake( 0, 0, newFrame.height, 0 )
+            }
         }
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+        isInset = !isInset
     }
 }
 
@@ -341,7 +345,6 @@ extension JCApplianceChecklistVC: JCButtonsCellDelegate {
 
 // MARK: - Date Picker Method
 extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
-    
     fileprivate func setupToolbar(title: String, picker: JCInputType) -> UIToolbar {
         let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
         toolbar.barTintColor = UIColor.darkGray
@@ -351,12 +354,10 @@ extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
         let labelItem = UIBarButtonItem(customView: label)
         var done: UIBarButtonItem!
         
-        if picker == .picker {
-            done = UIBarButtonItem(title: "Done",
-                                   style: .done,
-                                   target: self,
-                                   action: #selector(didSelectPicker))
-        }
+        done = UIBarButtonItem(title: "Done",
+                               style: .done,
+                               target: self,
+                               action: #selector(didPressDone))
         
         done.tintColor = UIColor.white
         let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -372,11 +373,7 @@ extension JCApplianceChecklistVC: JCTextFieldInputDelegate {
                             text: text)
     }
     
-    @objc func didSelectPicker() {
-        self.dismissKeyboard()
-    }
-    
-    @objc func didSelectDatePicker() {
-        self.dismissKeyboard()
+    func didPressDone() {
+        dismissKeyboard()
     }
 }

@@ -9,15 +9,17 @@
 import Foundation
 
 enum JCApplianceType: Int, CustomStringConvertible {
-    case mewp
     case empty
+    case mewp
+    case tc
+    case count
     
     var description: String {
         switch self {
-        case .mewp:
-            return "Mobile Elevating Work Platform"
-        default:
-            return ""
+        case .empty: return "Please Select"
+        case .mewp: return "Mobile Elevating Work Platform"
+        case .tc: return "Tower Crane"
+        default: return ""
         }
     }
 }
