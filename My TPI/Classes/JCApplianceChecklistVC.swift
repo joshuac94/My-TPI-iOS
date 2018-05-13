@@ -71,6 +71,15 @@ class JCApplianceChecklistVC: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
+        
+        
+        // TEST
+//        NotificationCenter.default.addObserver( self, #selector(didShowKeyboard(_:)),
+//                                                name: UIKeyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(didShowKeyboard(_:)),
+                                               name: NSNotification.Name.UIKeyboardWillChangeFrame,
+                                               object: nil)
     }
     
     // MARK: - Helper Methods
@@ -277,6 +286,14 @@ extension JCApplianceChecklistVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         if let selectedTextView = textField as? JCTextField {
             selectedTextView.toggleEditingMode()
+        }
+    }
+    
+    @objc func didShowKeyboard(_ note: NSNotification) {
+        if let newFrame = (note.userInfo?[ UIKeyboardFrameEndUserInfoKey ] as? NSValue)?.cgRectValue {
+            let insets = UIEdgeInsetsMake( 0, 0, newFrame.height, 0 )
+            tableView.contentInset = insets
+            tableView.scrollIndicatorInsets = insets
         }
     }
 }
