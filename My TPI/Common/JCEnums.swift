@@ -36,10 +36,21 @@ enum JCBasicResponse: Int, CustomStringConvertible {
     }
 }
 
-enum JCInspectionOutcome: String {
-    case incomplete = "Incomplete"
-    case satisfactory = "Satisfactory"
-    case unsatisfactory = "Unsatisfactory"
+enum JCInspectionOutcome: Int, CustomStringConvertible {
+    case empty
+    case incomplete
+    case satisfactory
+    case unsatisfactory
+    case count
+    
+    var description: String {
+        switch self {
+        case .incomplete: return "Incomplete"
+        case .satisfactory: return "Satisfactory"
+        case .unsatisfactory: return "Unsatisfactory"
+        default: return ""
+        }
+    }
 }
 
 enum JCInspectionType: Int, CustomStringConvertible {

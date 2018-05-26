@@ -28,6 +28,9 @@ class JCSummaryVC: UIViewController {
     // MARK: - View Life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setupVC()
     }
     
@@ -36,6 +39,7 @@ class JCSummaryVC: UIViewController {
     }
     
     @IBAction func editButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "editInspectionSegue", sender: self)
     }
     
     @IBAction func dismissButtonAction(_ sender: Any) {
@@ -55,6 +59,16 @@ class JCSummaryVC: UIViewController {
             locationLabel.text = "Manchester, GB"
         }
         
+    }
+    
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let nc = segue.destination as? UINavigationController,
+           let vc = nc.topViewController as? JCApplianceChecklistVC,
+           let id = viewModel?.inspectionID {
+            
+            vc.interactor.inspectionID = id
+        }
     }
     
 }

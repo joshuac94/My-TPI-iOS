@@ -141,7 +141,7 @@ extension JCTextFieldCell: UIPickerViewDelegate, UIPickerViewDataSource {
         case .datePicker: return 0
         case .reasonPicker: return JCReason.count.rawValue
         case .questionPicker: return JCBasicResponse.count.rawValue
-        case .outcomePicker: return 0
+        case .outcomePicker: return JCInspectionOutcome.count.rawValue
         case .equipmentPicker: return JCApplianceType.count.rawValue
         case .none: return 0
         }
@@ -154,7 +154,7 @@ extension JCTextFieldCell: UIPickerViewDelegate, UIPickerViewDataSource {
         case .datePicker: return ""
         case .reasonPicker: return JCReason(rawValue: row)?.description
         case .questionPicker: return JCBasicResponse(rawValue: row)?.description
-        case .outcomePicker: return ""
+        case .outcomePicker: return JCInspectionOutcome(rawValue: row)?.description
         case .equipmentPicker: return JCApplianceType(rawValue: row)?.description
         case .none: return ""
         }
@@ -167,6 +167,7 @@ extension JCTextFieldCell: UIPickerViewDelegate, UIPickerViewDataSource {
         case .questionPicker: text = JCBasicResponse(rawValue: row)?.description ?? ""
         case .reasonPicker: text = JCReason(rawValue: row)?.description ?? ""
         case .equipmentPicker: text = JCApplianceType(rawValue: row)?.description ?? ""
+        case .outcomePicker: text = JCInspectionOutcome(rawValue: row)?.description ?? ""
         default: break
         }
         text = text == "Please Select" ? "" : text

@@ -474,10 +474,11 @@
                                             <action selector="viewCertificateAction:" destination="aG3-eo-0EW" eventType="touchUpInside" id="WAS-1l-2n5"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-8f-Dcj">
-                                        <rect key="frame" x="276" y="15" width="22" height="22"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CL-8f-Dcj">
+                                        <rect key="frame" x="274" y="16" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="E"/>
+                                        <color key="tintColor" name="CTA"/>
+                                        <state key="normal" image="edit"/>
                                         <state key="highlighted" title="|">
                                             <color key="titleColor" name="CTA"/>
                                         </state>
@@ -550,6 +551,7 @@
                         <outlet property="outcomeLabel" destination="UFs-JS-RFH" id="p7o-40-buP"/>
                         <outlet property="popupView" destination="TRP-3n-yQR" id="4wQ-ls-FNZ"/>
                         <outlet property="viewCertButton" destination="etB-v8-ix8" id="34y-6N-ssY"/>
+                        <segue destination="QFA-R7-Gil" kind="presentation" identifier="editInspectionSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="hUE-Ec-Xxf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SiW-RB-ixl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -611,6 +613,10 @@
     <resources>
         <image name="chevron-left" width="24" height="24"/>
         <image name="chevron-right" width="24" height="24"/>
+        <image name="edit" width="512" height="512"/>
+        <namedColor name="CTA">
+            <color red="0.29499998688697815" green="0.4779999852180481" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="CTA">
             <color red="0.29499998688697815" green="0.4779999852180481" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
@@ -619,6 +625,6 @@
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qCQ-aT-eQg"/>
+        <segue reference="hUE-Ec-Xxf"/>
     </inferredMetricsTieBreakers>
 </document>

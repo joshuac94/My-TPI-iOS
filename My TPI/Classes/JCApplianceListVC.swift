@@ -64,7 +64,7 @@ extension JCApplianceListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndex = indexPath.row
-        if viewModels[indexPath.row].iconString == JCInspectionOutcome.incomplete.rawValue {
+        if viewModels[indexPath.row].iconString == JCInspectionOutcome.incomplete.description {
             performSegue(withIdentifier: "List-ApplianceChecklistVC", sender: self)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
